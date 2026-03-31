@@ -33,8 +33,11 @@ export function resolveExerciseForView(catalog, exerciseId, shuffleOptions = tru
   }
 
   const example = catalog.examplesById[exercise.example_id];
-  const verb = catalog.verbsById[example.verb_id];
+  const verb = example.verb_id ? catalog.verbsById[example.verb_id] : null;
   const pattern = catalog.patternsById[example.pattern_id];
+  const collocation = example.collocation_id
+    ? catalog.prepGerundCollocationsById[example.collocation_id]
+    : null;
 
   if (exercise.type === "multiple_choice") {
     const all = [
@@ -50,6 +53,7 @@ export function resolveExerciseForView(catalog, exerciseId, shuffleOptions = tru
       example,
       verb,
       pattern,
+      collocation,
       choices,
       sentence,
     };
@@ -65,6 +69,7 @@ export function resolveExerciseForView(catalog, exerciseId, shuffleOptions = tru
       example,
       verb,
       pattern,
+      collocation,
       choices: null,
       sentence,
       blankLemma,

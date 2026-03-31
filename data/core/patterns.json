@@ -1,30 +1,50 @@
 [
   {
     "id": "pat_gerund",
-    "name": "Verb + Gerund",
-    "structure": "Verb + [Verb]-ing",
+    "name": "Verb + -ing",
+    "structure": "Verb + another verb with **-ing**",
     "rule_id": "rule_gen_gerund",
     "type": "gerund",
-    "summary": "Many verbs are followed by the **-ing** form when another verb comes next. This lesson lists verbs that **only** take **-ing** here—not verbs that also allow **to + verb** with a different meaning.",
-    "contrast_note": "If you need **to + verb** after the main verb, see the **Verb + To-Infinitive** lesson. Verbs like **remember**, **stop**, and **forget** can take **both** structures; those are covered in **Tricky verbs (both forms)**."
+    "summary": "Many verbs use **-ing** when a second verb comes next. This lesson is only for verbs that **always** use **-ing** here. It is not for verbs that can also use **to + verb** with a different meaning.",
+    "contrast_note": "If you need **to + verb** after the main verb, open **Verb + to + verb**. **Remember**, **stop**, and **forget** use **both** forms with different meanings — see **Tricky verbs (two forms)**. Some verbs use **both** with a **similar** meaning — see **Both forms (same idea)**."
   },
   {
     "id": "pat_infinitive",
-    "name": "Verb + To-Infinitive",
-    "structure": "Verb + to + [Verb]",
+    "name": "Verb + to + verb",
+    "structure": "Verb + **to** + another verb",
     "rule_id": "rule_gen_infinitive",
     "type": "infinitive",
-    "summary": "Some verbs take **to + base verb** when another action follows. This lesson lists verbs that **only** use this pattern in your dataset—not verbs that also use **-ing** with a different meaning.",
-    "contrast_note": "For **verb + -ing** only, see **Verb + Gerund**. For verbs where **-ing** vs **to** changes the meaning, open **Tricky verbs (both forms)**."
+    "summary": "Some verbs use **to + verb** when a second action follows. This lesson is only for verbs that **always** use **to + verb** here. It is not for verbs that can also use **-ing** with a different meaning.",
+    "contrast_note": "For **verb + -ing** only, open **Verb + -ing**. When **-ing** and **to + verb** change the meaning, open **Tricky verbs (two forms)**. When both forms are OK with a **similar** idea, open **Both forms (same idea)**."
   },
   {
     "id": "pat_both_change",
-    "name": "Tricky verbs (both forms)",
-    "structure": "Same verb + **-ing** vs **to + verb** → different meanings",
+    "name": "Tricky verbs (two forms)",
+    "structure": "Same verb: **-ing** or **to + verb** — different meanings",
     "rule_id": "rule_both_change",
     "type": "both",
     "learn_kind": "both_change",
-    "summary": "Some verbs allow **both** **-ing** and **to + verb**, but the **meaning changes**. Learning them in isolation (only gerund or only infinitive lessons) is misleading—this lesson groups those verbs together.",
-    "contrast_note": "**Remember doing** = you recall a past experience. **Remember to do** = you must not forget a future task. **Stop doing** = you quit an activity. **Stop to do** = you pause **in order to** do something else (purpose). **Forget doing** vs **forget to do** follows a similar split (past memory vs future task)."
+    "summary": "Some verbs allow **-ing** **or** **to + verb**. The meaning changes. This lesson groups those verbs so you can compare them.",
+    "contrast_note": "**Remember doing** = you remember something you did before. **Remember to do** = do not forget something you must do later. **Stop doing** = you end an activity. **Stop to do** = you stop **so you can** do something else. **Forget doing** and **forget to do** work in a similar way (past vs future). This is **not** the same as **Both forms (same idea)** (for example **start** / **begin**)."
+  },
+  {
+    "id": "pat_both_same",
+    "name": "Both forms (same idea)",
+    "structure": "**-ing** or **to + verb** — the idea stays **similar**",
+    "rule_id": "rule_both_same",
+    "type": "both",
+    "learn_kind": "both_same",
+    "summary": "Some verbs allow **-ing** **or** **to + verb** after them. Often the meaning stays **similar**. This lesson is **not** for verbs where the meaning **clearly changes**.",
+    "contrast_note": "If the meaning **changes** a lot, open **Tricky verbs (two forms)** (**remember**, **stop**, **forget**). For **only -ing** or **only to + verb**, open the other two main lessons."
+  },
+  {
+    "id": "pat_prep_gerund",
+    "name": "Preposition + -ing",
+    "structure": "Small words (in, at, after) + **-ing**",
+    "rule_id": "rule_prep_gerund",
+    "type": "prep_gerund",
+    "learn_kind": "prep_gerund",
+    "summary": "Often the important part is a **small word** (**in**, **at**, **after**) or a **set phrase** (**interested in**, **good at**). After that you usually use **-ing**, not **to + verb**. This is not the same as **Verb + -ing** in the other lessons.",
+    "contrast_note": "**Verb + -ing** is about the **main verb** (for example **enjoy playing**, **decide to go**). This lesson is different: you learn what comes **after** **in**, **at**, **after**, and similar words. It is almost always **-ing** (for example **interested in learning**, **after eating**). Try to keep the two ideas separate."
   }
 ]

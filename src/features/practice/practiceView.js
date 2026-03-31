@@ -16,14 +16,13 @@ import { getPracticeUiSettings } from "./practiceUiSettings.js";
 const MODE_LABELS = {
   practice: "Practice",
   tricky: "Tricky verbs",
-  mixed: "Mixed exam",
-  speed: "Speed drill",
+  mixed: "Mixed quiz",
 };
 
 /**
  * @param {HTMLElement} root
  * @param {ReturnType<import('../../domain/buildCatalog.js').buildCatalog>} catalog
- * @param {'practice'|'tricky'|'mixed'|'speed'} mode
+ * @param {'practice'|'tricky'|'mixed'} mode
  * @param {string|null} [patternIdFilter]
  */
 export function mountPractice(root, catalog, mode, patternIdFilter = null) {
@@ -36,7 +35,7 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
 
   const patternBanner =
     patternIdFilter && catalog.patternsById[patternIdFilter]
-      ? `<p class="pattern-filter-banner muted" role="status">Focus: <strong>${escapeHtml(
+      ? `<p class="pattern-filter-banner muted" role="status">Practicing: <strong>${escapeHtml(
           catalog.patternsById[patternIdFilter].name
         )}</strong></p>`
       : "";
@@ -47,10 +46,8 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
       <div class="view-head__center">
         <h1 class="view-title">${escapeHtml(MODE_LABELS[mode] || "Practice")}</h1>
         ${patternBanner}
-        <div class="speed-bar" data-speed hidden>
-          <span class="muted">Time</span>
-          <span class="speed-bar__value" data-timer>—</span>
-        </div>
+        <p class="practice-anchor-line muted" data-practice-anchor hidden></p>
+        <p class="practice-score-line muted" data-practice-score hidden aria-live="polite"></p>
       </div>
     </div>
     <main class="practice-main">
@@ -87,8 +84,8 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
   const feedbackHost = root.querySelector(".feedback-host");
   const feedbackInner = root.querySelector(".feedback-inner");
   const nextBtn = root.querySelector(".next-btn");
-  const speedBar = root.querySelector("[data-speed]");
-  const timerEl = root.querySelector("[data-timer]");
+  const practiceScoreEl = root.querySelector("[data-practice-score]");
+  const practiceAnchorEl = root.querySelector("[data-practice-anchor]");
   const typeKicker = root.querySelector("[data-exercise-type]");
   const hintHost = root.querySelector("[data-hint-host]");
   const hintBtn = root.querySelector(".hint-btn");
@@ -111,7 +108,7 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
   const pickerState = { recentIds: [], mixedTypeIndex: 0 };
   const bufferSize = catalog.settings?.selection?.recentBufferSize ?? 4;
 
-  const sessionStats = { incorrectCount: 0, hintRevealCount: 0 };
+  const sessionStats = { correctCount: 0, incorrectCount: 0, hintRevealCount: 0 };
 
   /** @type {'mc'|'fill'|'verb_behavior'|null} */
   let currentInteractionKind = null;
@@ -133,7 +130,17 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
       return;
     }
     sessionStatsEl.hidden = false;
-    sessionStatsEl.textContent = `This session: ${sessionStats.incorrectCount} incorrect · ${sessionStats.hintRevealCount} hints`;
+    sessionStatsEl.textContent = `This session: ${sessionStats.incorrectCount} wrong · ${sessionStats.hintRevealCount} hints`;
+  }
+
+  function updatePracticeScoreLine() {
+    if (!practiceScoreEl) return;
+    if (!getPracticeUiSettings(catalog).showPracticeScoreCounters) {
+      practiceScoreEl.hidden = true;
+      return;
+    }
+    practiceScoreEl.hidden = false;
+    practiceScoreEl.textContent = `Correct: ${sessionStats.correctCount} · Wrong: ${sessionStats.incorrectCount}`;
   }
 
   let currentId = pickNextExerciseId(
@@ -143,36 +150,6 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
     pickerState,
     filterOpts
   );
-
-  /** @type {ReturnType<typeof setInterval> | null} */
-  let timerInterval = null;
-  let deadlineMs = 0;
-
-  function clearSpeedTimer() {
-    if (timerInterval != null) {
-      clearInterval(timerInterval);
-      timerInterval = null;
-    }
-  }
-
-  function startSpeedTimer(onTimeout) {
-    clearSpeedTimer();
-    if (mode !== "speed") return;
-    const sec = catalog.settings?.speed?.secondsPerQuestion ?? 25;
-    deadlineMs = Date.now() + sec * 1000;
-    if (speedBar) speedBar.hidden = false;
-    const tick = () => {
-      const left = Math.max(0, Math.ceil((deadlineMs - Date.now()) / 1000));
-      if (timerEl) timerEl.textContent = String(left);
-      if (left <= 0) {
-        clearSpeedTimer();
-        const auto = catalog.settings?.speed?.autoAdvanceOnTimeout !== false;
-        if (auto) onTimeout();
-      }
-    };
-    tick();
-    timerInterval = setInterval(tick, 200);
-  }
 
   function setFeedback(result, exercise, timedOut) {
     feedbackHost.hidden = false;
@@ -190,7 +167,7 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
         : genBad?.title || "Not quite";
 
     const shortLine = timedOut
-      ? `<p class="feedback-lead">${escapeHtml(genBad?.body || "Too slow — try the next one.")}</p>`
+      ? `<p class="feedback-lead">${escapeHtml(genBad?.body || "Too slow. Try the next one.")}</p>`
       : result.correct
         ? `<p class="feedback-lead">${feedbackBodyToHtml(genOk?.body || "Nice.")}</p>`
         : `<p class="feedback-lead">${feedbackBodyToHtml(genBad?.body || "")}</p>`;
@@ -277,13 +254,14 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
   /** @param {string} userValue @param {boolean} timedOut */
   function onAnswer(userValue, timedOut = false) {
     removeEnterAdvance();
-    clearSpeedTimer();
     const exercise = catalog.exercisesById[currentId];
     const result = timedOut
       ? { correct: false }
       : validateAnswer(exercise, userValue);
-    if (!result.correct && !timedOut) sessionStats.incorrectCount += 1;
+    if (result.correct && !timedOut) sessionStats.correctCount += 1;
+    if (!result.correct) sessionStats.incorrectCount += 1;
     updateSessionStatsEl();
+    updatePracticeScoreLine();
     disableActions();
     setFeedback(result, exercise, timedOut);
     nextBtn.hidden = false;
@@ -347,6 +325,15 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
     }
 
     const model = resolveExerciseForView(catalog, id, shuffleOptions);
+    if (practiceAnchorEl) {
+      if (model.collocation?.display_phrase) {
+        practiceAnchorEl.hidden = false;
+        practiceAnchorEl.textContent = `Starts with: ${model.collocation.display_phrase} …`;
+      } else {
+        practiceAnchorEl.hidden = true;
+        practiceAnchorEl.textContent = "";
+      }
+    }
     renderExerciseStem(stemHost, model);
 
     const placeholder = getPracticeUiSettings(catalog).fillBlankPlaceholder;
@@ -364,13 +351,8 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
       });
     }
 
-    if (mode === "speed") {
-      startSpeedTimer(() => onAnswer("", true));
-    } else if (speedBar) {
-      speedBar.hidden = true;
-    }
-
     updateSessionStatsEl();
+    updatePracticeScoreLine();
   }
 
   nextBtn.addEventListener("click", () => {

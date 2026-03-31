@@ -10,5 +10,6 @@ export function getPracticeUiSettings(catalog) {
         : "e.g. -ing or to + verb",
     enterToAdvanceOnCorrect: ui.enterToAdvanceOnCorrect === true,
     showSessionStats: ui.showSessionStats === true,
+    showPracticeScoreCounters: ui.showPracticeScoreCounters !== false,
   };
 }

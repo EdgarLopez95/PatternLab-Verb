@@ -3,7 +3,10 @@
     "id": "q_001",
     "type": "multiple_choice",
     "example_id": "ex_001",
-    "distractors": ["to play", "play"],
+    "distractors": [
+      "to play",
+      "play"
+    ],
     "correct_answer": "playing",
     "validation": {
       "case_sensitive": false,
@@ -27,7 +30,10 @@
     "id": "q_003",
     "type": "multiple_choice",
     "example_id": "ex_003",
-    "distractors": ["focusing", "focus"],
+    "distractors": [
+      "focusing",
+      "focus"
+    ],
     "correct_answer": "to focus",
     "validation": {
       "case_sensitive": false,
@@ -39,7 +45,10 @@
     "id": "q_004",
     "type": "multiple_choice",
     "example_id": "ex_004",
-    "distractors": ["eating", "eat"],
+    "distractors": [
+      "eating",
+      "eat"
+    ],
     "correct_answer": "to eat",
     "validation": {
       "case_sensitive": false,
@@ -63,7 +72,10 @@
     "id": "q_006",
     "type": "verb_pattern_behavior",
     "verb_id": "v_stop",
-    "distractors": ["only_gerund", "only_infinitive"],
+    "distractors": [
+      "only_gerund",
+      "only_infinitive"
+    ],
     "correct_answer": "both_change",
     "validation": {
       "case_sensitive": false,
@@ -75,12 +87,1887 @@
     "id": "q_007",
     "type": "verb_pattern_behavior",
     "verb_id": "v_enjoy",
-    "distractors": ["only_infinitive", "both_change"],
+    "distractors": [
+      "only_infinitive",
+      "both_change"
+    ],
     "correct_answer": "only_gerund",
     "validation": {
       "case_sensitive": false,
       "trim": true
     },
     "feedback_id": "fb_enjoy_gerund"
+  },
+  {
+    "id": "q_pg_001",
+    "type": "multiple_choice",
+    "example_id": "ex_pg_001",
+    "distractors": [
+      "to learn",
+      "learn"
+    ],
+    "correct_answer": "learning",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pg_adj_prep"
+  },
+  {
+    "id": "q_pg_002",
+    "type": "fill_blank",
+    "example_id": "ex_pg_002",
+    "distractors": [],
+    "correct_answer": "fixing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pg_adj_prep"
+  },
+  {
+    "id": "q_pg_003",
+    "type": "multiple_choice",
+    "example_id": "ex_pg_003",
+    "distractors": [
+      "to remember",
+      "remember"
+    ],
+    "correct_answer": "remembering",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pg_adj_prep"
+  },
+  {
+    "id": "q_pg_004",
+    "type": "fill_blank",
+    "example_id": "ex_pg_004",
+    "distractors": [],
+    "correct_answer": "waiting",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pg_adj_prep"
+  },
+  {
+    "id": "q_pg_005",
+    "type": "multiple_choice",
+    "example_id": "ex_pg_005",
+    "distractors": [
+      "to speak",
+      "speak"
+    ],
+    "correct_answer": "speaking",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pg_adj_prep"
+  },
+  {
+    "id": "q_pg_006",
+    "type": "fill_blank",
+    "example_id": "ex_pg_006",
+    "distractors": [],
+    "correct_answer": "After eating",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pg_subordinator"
+  },
+  {
+    "id": "q_pg_007",
+    "type": "multiple_choice",
+    "example_id": "ex_pg_007",
+    "distractors": [
+      "Before to leave",
+      "Before leave"
+    ],
+    "correct_answer": "Before leaving",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pg_subordinator"
+  },
+  {
+    "id": "q_pg_008",
+    "type": "fill_blank",
+    "example_id": "ex_pg_008",
+    "distractors": [],
+    "correct_answer": "without saying",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pg_subordinator"
+  },
+  {
+    "id": "q_008",
+    "type": "multiple_choice",
+    "example_id": "ex_006",
+    "distractors": [
+      "to do",
+      "do"
+    ],
+    "correct_answer": "doing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_finish_gerund"
+  },
+  {
+    "id": "q_009",
+    "type": "fill_blank",
+    "example_id": "ex_007",
+    "distractors": [],
+    "correct_answer": "making",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_avoid_gerund"
+  },
+  {
+    "id": "q_010",
+    "type": "multiple_choice",
+    "example_id": "ex_008",
+    "distractors": [
+      "visiting",
+      "visit"
+    ],
+    "correct_answer": "to visit",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_want_infinitive"
+  },
+  {
+    "id": "q_011",
+    "type": "fill_blank",
+    "example_id": "ex_009",
+    "distractors": [],
+    "correct_answer": "to see",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_hope_infinitive"
+  },
+  {
+    "id": "q_012",
+    "type": "multiple_choice",
+    "example_id": "ex_010",
+    "distractors": [
+      "meeting",
+      "meet"
+    ],
+    "correct_answer": "to meet",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_agree_infinitive"
+  },
+  {
+    "id": "q_013",
+    "type": "fill_blank",
+    "example_id": "ex_011",
+    "distractors": [],
+    "correct_answer": "reading",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_finish_gerund"
+  },
+  {
+    "id": "q_014",
+    "type": "multiple_choice",
+    "example_id": "ex_012",
+    "distractors": [
+      "to answer",
+      "answer"
+    ],
+    "correct_answer": "answering",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_avoid_gerund"
+  },
+  {
+    "id": "q_015",
+    "type": "fill_blank",
+    "example_id": "ex_013",
+    "distractors": [],
+    "correct_answer": "to come",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_want_infinitive"
+  },
+  {
+    "id": "q_016",
+    "type": "multiple_choice",
+    "example_id": "ex_014",
+    "distractors": [
+      "passing",
+      "pass"
+    ],
+    "correct_answer": "to pass",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_hope_infinitive"
+  },
+  {
+    "id": "q_017",
+    "type": "fill_blank",
+    "example_id": "ex_015",
+    "distractors": [],
+    "correct_answer": "to help",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_agree_infinitive"
+  },
+  {
+    "id": "q_018",
+    "type": "multiple_choice",
+    "example_id": "ex_016",
+    "distractors": [
+      "raining",
+      "rain"
+    ],
+    "correct_answer": "to rain",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_019",
+    "type": "fill_blank",
+    "example_id": "ex_017",
+    "distractors": [],
+    "correct_answer": "learning",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_020",
+    "type": "multiple_choice",
+    "example_id": "ex_018",
+    "distractors": [
+      "to learn",
+      "learn"
+    ],
+    "correct_answer": "learning",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_021",
+    "type": "fill_blank",
+    "example_id": "ex_019",
+    "distractors": [],
+    "correct_answer": "to feel",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_022",
+    "type": "verb_pattern_behavior",
+    "verb_id": "v_begin",
+    "distractors": [
+      "only_gerund",
+      "only_infinitive"
+    ],
+    "correct_answer": "both_same",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_023",
+    "type": "verb_pattern_behavior",
+    "verb_id": "v_start",
+    "distractors": [
+      "only_gerund",
+      "both_change"
+    ],
+    "correct_answer": "both_same",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_024",
+    "type": "multiple_choice",
+    "example_id": "ex_020",
+    "distractors": [
+      "resting",
+      "rest"
+    ],
+    "correct_answer": "to rest",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_025",
+    "type": "multiple_choice",
+    "example_id": "ex_021",
+    "distractors": [
+      "calling",
+      "call"
+    ],
+    "correct_answer": "to call",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_026",
+    "type": "multiple_choice",
+    "example_id": "ex_022",
+    "distractors": [
+      "traveling",
+      "travel"
+    ],
+    "correct_answer": "to travel",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_027",
+    "type": "multiple_choice",
+    "example_id": "ex_023",
+    "distractors": [
+      "studying",
+      "study"
+    ],
+    "correct_answer": "to study",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_028",
+    "type": "multiple_choice",
+    "example_id": "ex_024",
+    "distractors": [
+      "waiting",
+      "wait"
+    ],
+    "correct_answer": "to wait",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_029",
+    "type": "multiple_choice",
+    "example_id": "ex_025",
+    "distractors": [
+      "staying",
+      "stay"
+    ],
+    "correct_answer": "to stay",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_030",
+    "type": "multiple_choice",
+    "example_id": "ex_026",
+    "distractors": [
+      "arriveing",
+      "arrive"
+    ],
+    "correct_answer": "to arrive",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_031",
+    "type": "multiple_choice",
+    "example_id": "ex_027",
+    "distractors": [
+      "passing",
+      "pass"
+    ],
+    "correct_answer": "to pass",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_032",
+    "type": "multiple_choice",
+    "example_id": "ex_028",
+    "distractors": [
+      "helping",
+      "help"
+    ],
+    "correct_answer": "to help",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_033",
+    "type": "multiple_choice",
+    "example_id": "ex_029",
+    "distractors": [
+      "calling",
+      "call"
+    ],
+    "correct_answer": "to call",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_034",
+    "type": "multiple_choice",
+    "example_id": "ex_030",
+    "distractors": [
+      "finishing",
+      "finish"
+    ],
+    "correct_answer": "to finish",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_035",
+    "type": "multiple_choice",
+    "example_id": "ex_031",
+    "distractors": [
+      "opening",
+      "open"
+    ],
+    "correct_answer": "to open",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_036",
+    "type": "multiple_choice",
+    "example_id": "ex_032",
+    "distractors": [
+      "learning",
+      "learn"
+    ],
+    "correct_answer": "to learn",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_037",
+    "type": "multiple_choice",
+    "example_id": "ex_033",
+    "distractors": [
+      "swiming",
+      "swim"
+    ],
+    "correct_answer": "to swim",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_038",
+    "type": "multiple_choice",
+    "example_id": "ex_034",
+    "distractors": [
+      "answering",
+      "answer"
+    ],
+    "correct_answer": "to answer",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_039",
+    "type": "multiple_choice",
+    "example_id": "ex_035",
+    "distractors": [
+      "paying",
+      "pay"
+    ],
+    "correct_answer": "to pay",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_040",
+    "type": "multiple_choice",
+    "example_id": "ex_036",
+    "distractors": [
+      "buying",
+      "buy"
+    ],
+    "correct_answer": "to buy",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_041",
+    "type": "multiple_choice",
+    "example_id": "ex_037",
+    "distractors": [
+      "takeing",
+      "take"
+    ],
+    "correct_answer": "to take",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_042",
+    "type": "multiple_choice",
+    "example_id": "ex_038",
+    "distractors": [
+      "knowing",
+      "know"
+    ],
+    "correct_answer": "to know",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_043",
+    "type": "multiple_choice",
+    "example_id": "ex_039",
+    "distractors": [
+      "raining",
+      "rain"
+    ],
+    "correct_answer": "to rain",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_044",
+    "type": "multiple_choice",
+    "example_id": "ex_040",
+    "distractors": [
+      "enjoying",
+      "enjoy"
+    ],
+    "correct_answer": "to enjoy",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_045",
+    "type": "multiple_choice",
+    "example_id": "ex_041",
+    "distractors": [
+      "agreeing",
+      "agree"
+    ],
+    "correct_answer": "to agree",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_046",
+    "type": "multiple_choice",
+    "example_id": "ex_042",
+    "distractors": [
+      "driveing",
+      "drive"
+    ],
+    "correct_answer": "to drive",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_047",
+    "type": "multiple_choice",
+    "example_id": "ex_043",
+    "distractors": [
+      "helping",
+      "help"
+    ],
+    "correct_answer": "to help",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_048",
+    "type": "multiple_choice",
+    "example_id": "ex_044",
+    "distractors": [
+      "leaveing",
+      "leave"
+    ],
+    "correct_answer": "to leave",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_049",
+    "type": "multiple_choice",
+    "example_id": "ex_045",
+    "distractors": [
+      "moveing",
+      "move"
+    ],
+    "correct_answer": "to move",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_050",
+    "type": "multiple_choice",
+    "example_id": "ex_046",
+    "distractors": [
+      "staying",
+      "stay"
+    ],
+    "correct_answer": "to stay",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_051",
+    "type": "multiple_choice",
+    "example_id": "ex_047",
+    "distractors": [
+      "wining",
+      "win"
+    ],
+    "correct_answer": "to win",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_052",
+    "type": "multiple_choice",
+    "example_id": "ex_048",
+    "distractors": [
+      "fixing",
+      "fix"
+    ],
+    "correct_answer": "to fix",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_053",
+    "type": "multiple_choice",
+    "example_id": "ex_049",
+    "distractors": [
+      "explaining",
+      "explain"
+    ],
+    "correct_answer": "to explain",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_054",
+    "type": "multiple_choice",
+    "example_id": "ex_050",
+    "distractors": [
+      "seeing",
+      "see"
+    ],
+    "correct_answer": "to see",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_055",
+    "type": "multiple_choice",
+    "example_id": "ex_051",
+    "distractors": [
+      "arriveing",
+      "arrive"
+    ],
+    "correct_answer": "to arrive",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_056",
+    "type": "multiple_choice",
+    "example_id": "ex_052",
+    "distractors": [
+      "relaxing",
+      "relax"
+    ],
+    "correct_answer": "to relax",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_057",
+    "type": "multiple_choice",
+    "example_id": "ex_053",
+    "distractors": [
+      "wining",
+      "win"
+    ],
+    "correct_answer": "to win",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_058",
+    "type": "multiple_choice",
+    "example_id": "ex_054",
+    "distractors": [
+      "asking",
+      "ask"
+    ],
+    "correct_answer": "to ask",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_059",
+    "type": "multiple_choice",
+    "example_id": "ex_055",
+    "distractors": [
+      "speaking",
+      "speak"
+    ],
+    "correct_answer": "to speak",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_060",
+    "type": "multiple_choice",
+    "example_id": "ex_056",
+    "distractors": [
+      "applying",
+      "apply"
+    ],
+    "correct_answer": "to apply",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_061",
+    "type": "multiple_choice",
+    "example_id": "ex_057",
+    "distractors": [
+      "thanking",
+      "thank"
+    ],
+    "correct_answer": "to thank",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_062",
+    "type": "multiple_choice",
+    "example_id": "ex_058",
+    "distractors": [
+      "meeting",
+      "meet"
+    ],
+    "correct_answer": "to meet",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_063",
+    "type": "multiple_choice",
+    "example_id": "ex_059",
+    "distractors": [
+      "calling",
+      "call"
+    ],
+    "correct_answer": "to call",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_064",
+    "type": "multiple_choice",
+    "example_id": "ex_060",
+    "distractors": [
+      "to chang",
+      "chang"
+    ],
+    "correct_answer": "changing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_065",
+    "type": "multiple_choice",
+    "example_id": "ex_061",
+    "distractors": [
+      "to mov",
+      "mov"
+    ],
+    "correct_answer": "moving",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_066",
+    "type": "multiple_choice",
+    "example_id": "ex_062",
+    "distractors": [
+      "to leav",
+      "leav"
+    ],
+    "correct_answer": "leaving",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_067",
+    "type": "multiple_choice",
+    "example_id": "ex_063",
+    "distractors": [
+      "to tak",
+      "tak"
+    ],
+    "correct_answer": "taking",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_068",
+    "type": "multiple_choice",
+    "example_id": "ex_064",
+    "distractors": [
+      "to try",
+      "try"
+    ],
+    "correct_answer": "trying",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_069",
+    "type": "multiple_choice",
+    "example_id": "ex_065",
+    "distractors": [
+      "to forgett",
+      "forgett"
+    ],
+    "correct_answer": "forgetting",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_070",
+    "type": "multiple_choice",
+    "example_id": "ex_066",
+    "distractors": [
+      "to clos",
+      "clos"
+    ],
+    "correct_answer": "closing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_071",
+    "type": "multiple_choice",
+    "example_id": "ex_067",
+    "distractors": [
+      "to wait",
+      "wait"
+    ],
+    "correct_answer": "waiting",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_072",
+    "type": "multiple_choice",
+    "example_id": "ex_068",
+    "distractors": [
+      "to liv",
+      "liv"
+    ],
+    "correct_answer": "living",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_073",
+    "type": "multiple_choice",
+    "example_id": "ex_069",
+    "distractors": [
+      "to do",
+      "do"
+    ],
+    "correct_answer": "doing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_074",
+    "type": "multiple_choice",
+    "example_id": "ex_070",
+    "distractors": [
+      "to read",
+      "read"
+    ],
+    "correct_answer": "reading",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_075",
+    "type": "multiple_choice",
+    "example_id": "ex_071",
+    "distractors": [
+      "to see",
+      "see"
+    ],
+    "correct_answer": "seeing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_076",
+    "type": "multiple_choice",
+    "example_id": "ex_072",
+    "distractors": [
+      "to mak",
+      "mak"
+    ],
+    "correct_answer": "making",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_077",
+    "type": "multiple_choice",
+    "example_id": "ex_073",
+    "distractors": [
+      "to los",
+      "los"
+    ],
+    "correct_answer": "losing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_078",
+    "type": "multiple_choice",
+    "example_id": "ex_074",
+    "distractors": [
+      "to tak",
+      "tak"
+    ],
+    "correct_answer": "taking",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_079",
+    "type": "multiple_choice",
+    "example_id": "ex_075",
+    "distractors": [
+      "to know",
+      "know"
+    ],
+    "correct_answer": "knowing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_080",
+    "type": "multiple_choice",
+    "example_id": "ex_076",
+    "distractors": [
+      "to play",
+      "play"
+    ],
+    "correct_answer": "playing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_081",
+    "type": "multiple_choice",
+    "example_id": "ex_077",
+    "distractors": [
+      "to speak",
+      "speak"
+    ],
+    "correct_answer": "speaking",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_082",
+    "type": "multiple_choice",
+    "example_id": "ex_078",
+    "distractors": [
+      "to hav",
+      "hav"
+    ],
+    "correct_answer": "having",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_083",
+    "type": "multiple_choice",
+    "example_id": "ex_079",
+    "distractors": [
+      "to leav",
+      "leav"
+    ],
+    "correct_answer": "leaving",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_084",
+    "type": "multiple_choice",
+    "example_id": "ex_080",
+    "distractors": [
+      "to los",
+      "los"
+    ],
+    "correct_answer": "losing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_085",
+    "type": "multiple_choice",
+    "example_id": "ex_081",
+    "distractors": [
+      "to miss",
+      "miss"
+    ],
+    "correct_answer": "missing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_086",
+    "type": "multiple_choice",
+    "example_id": "ex_082",
+    "distractors": [
+      "to see",
+      "see"
+    ],
+    "correct_answer": "seeing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_087",
+    "type": "multiple_choice",
+    "example_id": "ex_083",
+    "distractors": [
+      "to pay",
+      "pay"
+    ],
+    "correct_answer": "paying",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_088",
+    "type": "multiple_choice",
+    "example_id": "ex_084",
+    "distractors": [
+      "to see",
+      "see"
+    ],
+    "correct_answer": "seeing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_089",
+    "type": "multiple_choice",
+    "example_id": "ex_085",
+    "distractors": [
+      "to catch",
+      "catch"
+    ],
+    "correct_answer": "catching",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_090",
+    "type": "multiple_choice",
+    "example_id": "ex_086",
+    "distractors": [
+      "to hav",
+      "hav"
+    ],
+    "correct_answer": "having",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_091",
+    "type": "multiple_choice",
+    "example_id": "ex_087",
+    "distractors": [
+      "to hear",
+      "hear"
+    ],
+    "correct_answer": "hearing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_092",
+    "type": "multiple_choice",
+    "example_id": "ex_088",
+    "distractors": [
+      "to eat",
+      "eat"
+    ],
+    "correct_answer": "eating",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_093",
+    "type": "multiple_choice",
+    "example_id": "ex_089",
+    "distractors": [
+      "to say",
+      "say"
+    ],
+    "correct_answer": "saying",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_094",
+    "type": "multiple_choice",
+    "example_id": "ex_090",
+    "distractors": [
+      "to laugh",
+      "laugh"
+    ],
+    "correct_answer": "laughing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_095",
+    "type": "multiple_choice",
+    "example_id": "ex_091",
+    "distractors": [
+      "to worry",
+      "worry"
+    ],
+    "correct_answer": "worrying",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
+  },
+  {
+    "id": "q_096",
+    "type": "multiple_choice",
+    "example_id": "ex_092",
+    "distractors": [
+      "to work",
+      "work"
+    ],
+    "correct_answer": "working",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_097",
+    "type": "multiple_choice",
+    "example_id": "ex_093",
+    "distractors": [
+      "to to study",
+      "to studying"
+    ],
+    "correct_answer": "to study",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_098",
+    "type": "multiple_choice",
+    "example_id": "ex_094",
+    "distractors": [
+      "to read",
+      "read"
+    ],
+    "correct_answer": "reading",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_099",
+    "type": "multiple_choice",
+    "example_id": "ex_095",
+    "distractors": [
+      "to to read",
+      "to reading"
+    ],
+    "correct_answer": "to read",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_100",
+    "type": "multiple_choice",
+    "example_id": "ex_096",
+    "distractors": [
+      "to travel",
+      "travel"
+    ],
+    "correct_answer": "traveling",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_101",
+    "type": "multiple_choice",
+    "example_id": "ex_097",
+    "distractors": [
+      "to to cook",
+      "to cooking"
+    ],
+    "correct_answer": "to cook",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_102",
+    "type": "multiple_choice",
+    "example_id": "ex_098",
+    "distractors": [
+      "to wait",
+      "wait"
+    ],
+    "correct_answer": "waiting",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_103",
+    "type": "multiple_choice",
+    "example_id": "ex_099",
+    "distractors": [
+      "to to be",
+      "to being"
+    ],
+    "correct_answer": "to be",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_104",
+    "type": "multiple_choice",
+    "example_id": "ex_100",
+    "distractors": [
+      "to walk",
+      "walk"
+    ],
+    "correct_answer": "walking",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_105",
+    "type": "multiple_choice",
+    "example_id": "ex_101",
+    "distractors": [
+      "to to eat",
+      "to eating"
+    ],
+    "correct_answer": "to eat",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_106",
+    "type": "multiple_choice",
+    "example_id": "ex_102",
+    "distractors": [
+      "to watch",
+      "watch"
+    ],
+    "correct_answer": "watching",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_107",
+    "type": "multiple_choice",
+    "example_id": "ex_103",
+    "distractors": [
+      "to to hear",
+      "to hearing"
+    ],
+    "correct_answer": "to hear",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_both_same"
+  },
+  {
+    "id": "q_108",
+    "type": "multiple_choice",
+    "example_id": "ex_104",
+    "distractors": [
+      "bringing",
+      "bring"
+    ],
+    "correct_answer": "to bring",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_remember_infinitive"
+  },
+  {
+    "id": "q_109",
+    "type": "multiple_choice",
+    "example_id": "ex_105",
+    "distractors": [
+      "to meet",
+      "meet"
+    ],
+    "correct_answer": "meeting",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_forget_gerund"
+  },
+  {
+    "id": "q_110",
+    "type": "multiple_choice",
+    "example_id": "ex_106",
+    "distractors": [
+      "to talk",
+      "talk"
+    ],
+    "correct_answer": "talking",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_stop_gerund"
+  },
+  {
+    "id": "q_111",
+    "type": "multiple_choice",
+    "example_id": "ex_107",
+    "distractors": [
+      "leaveing",
+      "leave"
+    ],
+    "correct_answer": "to leave",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_infinitive_generic"
+  },
+  {
+    "id": "q_112",
+    "type": "multiple_choice",
+    "example_id": "ex_108",
+    "distractors": [
+      "to turn",
+      "turn"
+    ],
+    "correct_answer": "turning",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_try_behavior"
+  },
+  {
+    "id": "q_113",
+    "type": "multiple_choice",
+    "example_id": "ex_109",
+    "distractors": [
+      "understanding",
+      "understand"
+    ],
+    "correct_answer": "to understand",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_try_behavior"
+  },
+  {
+    "id": "q_114",
+    "type": "multiple_choice",
+    "example_id": "ex_110",
+    "distractors": [
+      "to tell",
+      "tell"
+    ],
+    "correct_answer": "telling",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_regret_behavior"
+  },
+  {
+    "id": "q_115",
+    "type": "multiple_choice",
+    "example_id": "ex_111",
+    "distractors": [
+      "announceing",
+      "announce"
+    ],
+    "correct_answer": "to announce",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_regret_behavior"
+  },
+  {
+    "id": "q_116",
+    "type": "multiple_choice",
+    "example_id": "ex_112",
+    "distractors": [
+      "shouting",
+      "shout"
+    ],
+    "correct_answer": "to shout",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_mean_behavior"
+  },
+  {
+    "id": "q_117",
+    "type": "multiple_choice",
+    "example_id": "ex_113",
+    "distractors": [
+      "to sav",
+      "sav"
+    ],
+    "correct_answer": "saving",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_mean_behavior"
+  },
+  {
+    "id": "q_118",
+    "type": "multiple_choice",
+    "example_id": "ex_114",
+    "distractors": [
+      "to eat",
+      "eat"
+    ],
+    "correct_answer": "eating",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_go_on_behavior"
+  },
+  {
+    "id": "q_119",
+    "type": "multiple_choice",
+    "example_id": "ex_115",
+    "distractors": [
+      "explaining",
+      "explain"
+    ],
+    "correct_answer": "to explain",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_go_on_behavior"
+  },
+  {
+    "id": "q_120",
+    "type": "verb_pattern_behavior",
+    "verb_id": "v_try",
+    "distractors": [
+      "only_gerund",
+      "only_infinitive"
+    ],
+    "correct_answer": "both_change",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_try_behavior"
+  },
+  {
+    "id": "q_121",
+    "type": "verb_pattern_behavior",
+    "verb_id": "v_regret",
+    "distractors": [
+      "only_gerund",
+      "only_infinitive"
+    ],
+    "correct_answer": "both_change",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_regret_behavior"
+  },
+  {
+    "id": "q_122",
+    "type": "verb_pattern_behavior",
+    "verb_id": "v_mean",
+    "distractors": [
+      "only_gerund",
+      "only_infinitive"
+    ],
+    "correct_answer": "both_change",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_mean_behavior"
+  },
+  {
+    "id": "q_123",
+    "type": "verb_pattern_behavior",
+    "verb_id": "v_go_on",
+    "distractors": [
+      "only_gerund",
+      "only_infinitive"
+    ],
+    "correct_answer": "both_change",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_go_on_behavior"
+  },
+  {
+    "id": "q_124",
+    "type": "verb_pattern_behavior",
+    "verb_id": "v_remember",
+    "distractors": [
+      "only_gerund",
+      "only_infinitive"
+    ],
+    "correct_answer": "both_change",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_remember_gerund"
+  },
+  {
+    "id": "q_125",
+    "type": "verb_pattern_behavior",
+    "verb_id": "v_forget",
+    "distractors": [
+      "only_gerund",
+      "only_infinitive"
+    ],
+    "correct_answer": "both_change",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_forget_infinitive"
+  },
+  {
+    "id": "q_126",
+    "type": "multiple_choice",
+    "example_id": "ex_116",
+    "distractors": [
+      "to play",
+      "play"
+    ],
+    "correct_answer": "playing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_pat_gerund_generic"
   }
 ]

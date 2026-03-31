@@ -68,5 +68,1671 @@
     "level": "A2",
     "focus": "meaning_change",
     "is_tricky": true
+  },
+  {
+    "id": "ex_pg_001",
+    "pattern_id": "pat_prep_gerund",
+    "collocation_id": "col_interested_in",
+    "sentence_parts": {
+      "prefix": "She's interested in ",
+      "target": "learning",
+      "suffix": " Japanese this year."
+    },
+    "translation_es": "Le interesa aprender japonés este año.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_pg_002",
+    "pattern_id": "pat_prep_gerund",
+    "collocation_id": "col_good_at",
+    "sentence_parts": {
+      "prefix": "Miguel is good at ",
+      "target": "fixing",
+      "suffix": " bikes."
+    },
+    "translation_es": "Miguel es bueno arreglando bicicletas.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_pg_003",
+    "pattern_id": "pat_prep_gerund",
+    "collocation_id": "col_bad_at",
+    "sentence_parts": {
+      "prefix": "I'm bad at ",
+      "target": "remembering",
+      "suffix": " names."
+    },
+    "translation_es": "Se me mal dan los nombres.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_pg_004",
+    "pattern_id": "pat_prep_gerund",
+    "collocation_id": "col_tired_of",
+    "sentence_parts": {
+      "prefix": "We're tired of ",
+      "target": "waiting",
+      "suffix": " in line."
+    },
+    "translation_es": "Estamos cansados de esperar en la fila.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_pg_005",
+    "pattern_id": "pat_prep_gerund",
+    "collocation_id": "col_afraid_of",
+    "sentence_parts": {
+      "prefix": "Nina is afraid of ",
+      "target": "speaking",
+      "suffix": " in public."
+    },
+    "translation_es": "Nina tiene miedo de hablar en público.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_pg_006",
+    "pattern_id": "pat_prep_gerund",
+    "collocation_id": "col_after",
+    "sentence_parts": {
+      "prefix": "",
+      "target": "After eating",
+      "suffix": ", we went for a walk."
+    },
+    "translation_es": "Después de comer, salimos a caminar.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_pg_007",
+    "pattern_id": "pat_prep_gerund",
+    "collocation_id": "col_before",
+    "sentence_parts": {
+      "prefix": "",
+      "target": "Before leaving",
+      "suffix": ", turn off the lights."
+    },
+    "translation_es": "Antes de irte, apaga las luces.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_pg_008",
+    "pattern_id": "pat_prep_gerund",
+    "collocation_id": "col_without",
+    "sentence_parts": {
+      "prefix": "He left ",
+      "target": "without saying",
+      "suffix": " goodbye."
+    },
+    "translation_es": "Se fue sin despedirse.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_006",
+    "verb_id": "v_finish",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "Please finish ",
+      "target": "doing",
+      "suffix": " your homework before dinner."
+    },
+    "translation_es": "Por favor termina los deberes antes de cenar.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_007",
+    "verb_id": "v_avoid",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "She tries to avoid ",
+      "target": "making",
+      "suffix": " the same mistake."
+    },
+    "translation_es": "Ella intenta evitar cometer el mismo error.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_008",
+    "verb_id": "v_want",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "They want ",
+      "target": "to visit",
+      "suffix": " the museum tomorrow."
+    },
+    "translation_es": "Quieren visitar el museo mañana.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_009",
+    "verb_id": "v_hope",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "We hope ",
+      "target": "to see",
+      "suffix": " you again soon."
+    },
+    "translation_es": "Esperamos verte pronto otra vez.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_010",
+    "verb_id": "v_agree",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "The team agreed ",
+      "target": "to meet",
+      "suffix": " at nine."
+    },
+    "translation_es": "El equipo acordó reunirse a las nueve.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_011",
+    "verb_id": "v_finish",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "I finished ",
+      "target": "reading",
+      "suffix": " the book last night."
+    },
+    "translation_es": "Terminé de leer el libro anoche.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_012",
+    "verb_id": "v_avoid",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "He avoided ",
+      "target": "answering",
+      "suffix": " the question."
+    },
+    "translation_es": "Evitó responder la pregunta.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_013",
+    "verb_id": "v_want",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "Do you want ",
+      "target": "to come",
+      "suffix": " with us?"
+    },
+    "translation_es": "¿Quieres venir con nosotros?",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_014",
+    "verb_id": "v_hope",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "She hopes ",
+      "target": "to pass",
+      "suffix": " the exam."
+    },
+    "translation_es": "Ella espera aprobar el examen.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_015",
+    "verb_id": "v_agree",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "They agree ",
+      "target": "to help",
+      "suffix": " on Saturday."
+    },
+    "translation_es": "Están de acuerdo en ayudar el sábado.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_016",
+    "verb_id": "v_begin",
+    "pattern_id": "pat_both_same",
+    "sentence_parts": {
+      "prefix": "It began ",
+      "target": "to rain",
+      "suffix": " in the afternoon."
+    },
+    "translation_es": "Empezó a llover por la tarde.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_017",
+    "verb_id": "v_begin",
+    "pattern_id": "pat_both_same",
+    "sentence_parts": {
+      "prefix": "She began ",
+      "target": "learning",
+      "suffix": " English last year."
+    },
+    "translation_es": "Empezó a aprender inglés el año pasado.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_018",
+    "verb_id": "v_start",
+    "pattern_id": "pat_both_same",
+    "sentence_parts": {
+      "prefix": "She started ",
+      "target": "learning",
+      "suffix": " French in January."
+    },
+    "translation_es": "Empezó a aprender francés en enero.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_019",
+    "verb_id": "v_start",
+    "pattern_id": "pat_both_same",
+    "sentence_parts": {
+      "prefix": "He started ",
+      "target": "to feel",
+      "suffix": " better after lunch."
+    },
+    "translation_es": "Empezó a sentirse mejor después del almuerzo.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_020",
+    "verb_id": "v_need",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "I need ",
+      "target": "to rest",
+      "suffix": " tonight."
+    },
+    "translation_es": "Necesito descansar esta noche.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_021",
+    "verb_id": "v_need",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "She needs ",
+      "target": "to call",
+      "suffix": " her mom."
+    },
+    "translation_es": "Ella necesita llamar a su mamá.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_022",
+    "verb_id": "v_plan",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "We plan ",
+      "target": "to travel",
+      "suffix": " in July."
+    },
+    "translation_es": "Planeamos viajar en julio.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_023",
+    "verb_id": "v_plan",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "He is planning ",
+      "target": "to study",
+      "suffix": " abroad."
+    },
+    "translation_es": "Él planea estudiar en el extranjero.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_024",
+    "verb_id": "v_choose",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "They chose ",
+      "target": "to wait",
+      "suffix": "."
+    },
+    "translation_es": "Ellos eligieron esperar.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_025",
+    "verb_id": "v_choose",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "I can't choose ",
+      "target": "to stay",
+      "suffix": " or leave."
+    },
+    "translation_es": "No puedo elegir quedarme o irme.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_026",
+    "verb_id": "v_expect",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "We expect ",
+      "target": "to arrive",
+      "suffix": " at six."
+    },
+    "translation_es": "Esperamos llegar a las seis.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_027",
+    "verb_id": "v_expect",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "She expects ",
+      "target": "to pass",
+      "suffix": " the test."
+    },
+    "translation_es": "Ella espera aprobar el examen.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_028",
+    "verb_id": "v_promise",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "I promise ",
+      "target": "to help",
+      "suffix": " you."
+    },
+    "translation_es": "Prometo ayudarte.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_029",
+    "verb_id": "v_promise",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "He promised ",
+      "target": "to call",
+      "suffix": " later."
+    },
+    "translation_es": "Prometió llamar después.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_030",
+    "verb_id": "v_manage",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "She managed ",
+      "target": "to finish",
+      "suffix": " on time."
+    },
+    "translation_es": "Logró terminar a tiempo.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_031",
+    "verb_id": "v_manage",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "We couldn't manage ",
+      "target": "to open",
+      "suffix": " the door."
+    },
+    "translation_es": "No pudimos abrir la puerta.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_032",
+    "verb_id": "v_learn",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "I want ",
+      "target": "to learn",
+      "suffix": " French."
+    },
+    "translation_es": "Quiero aprender francés.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_033",
+    "verb_id": "v_learn",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "She learned ",
+      "target": "to swim",
+      "suffix": " last year."
+    },
+    "translation_es": "Aprendió a nadar el año pasado.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_034",
+    "verb_id": "v_refuse",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "He refused ",
+      "target": "to answer",
+      "suffix": "."
+    },
+    "translation_es": "Se negó a responder.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_035",
+    "verb_id": "v_refuse",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "They refused ",
+      "target": "to pay",
+      "suffix": "."
+    },
+    "translation_es": "Se negaron a pagar.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_036",
+    "verb_id": "v_afford",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "We can't afford ",
+      "target": "to buy",
+      "suffix": " a car now."
+    },
+    "translation_es": "No podemos permitirnos comprar un coche ahora.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_037",
+    "verb_id": "v_afford",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "She can afford ",
+      "target": "to take",
+      "suffix": " a break."
+    },
+    "translation_es": "Puede permitirse tomarse un descanso.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_038",
+    "verb_id": "v_seem",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "He seems ",
+      "target": "to know",
+      "suffix": " the answer."
+    },
+    "translation_es": "Parece saber la respuesta.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_039",
+    "verb_id": "v_seem",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "It seems ",
+      "target": "to rain",
+      "suffix": " soon."
+    },
+    "translation_es": "Parece que va a llover pronto.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_040",
+    "verb_id": "v_appear",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "She appeared ",
+      "target": "to enjoy",
+      "suffix": " the show."
+    },
+    "translation_es": "Parecía disfrutar del show.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_041",
+    "verb_id": "v_appear",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "They appeared ",
+      "target": "to agree",
+      "suffix": "."
+    },
+    "translation_es": "Parecían estar de acuerdo.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_042",
+    "verb_id": "v_offer",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "He offered ",
+      "target": "to drive",
+      "suffix": " us home."
+    },
+    "translation_es": "Se ofreció a llevarnos a casa.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_043",
+    "verb_id": "v_offer",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "I offered ",
+      "target": "to help",
+      "suffix": "."
+    },
+    "translation_es": "Me ofrecí a ayudar.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_044",
+    "verb_id": "v_prepare",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "She prepared ",
+      "target": "to leave",
+      "suffix": "."
+    },
+    "translation_es": "Se preparó para irse.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_045",
+    "verb_id": "v_prepare",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "We are preparing ",
+      "target": "to move",
+      "suffix": "."
+    },
+    "translation_es": "Nos estamos preparando para mudarnos.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_046",
+    "verb_id": "v_intend",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "I intend ",
+      "target": "to stay",
+      "suffix": " here."
+    },
+    "translation_es": "Tengo la intención de quedarme aquí.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_047",
+    "verb_id": "v_intend",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "They intend ",
+      "target": "to win",
+      "suffix": "."
+    },
+    "translation_es": "Tienen la intención de ganar.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_048",
+    "verb_id": "v_attempt",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "He attempted ",
+      "target": "to fix",
+      "suffix": " the bike."
+    },
+    "translation_es": "Intentó arreglar la bici.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_049",
+    "verb_id": "v_attempt",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "She attempted ",
+      "target": "to explain",
+      "suffix": "."
+    },
+    "translation_es": "Intentó explicar.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_050",
+    "verb_id": "v_fail",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "I failed ",
+      "target": "to see",
+      "suffix": " him."
+    },
+    "translation_es": "No logré verlo.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_051",
+    "verb_id": "v_fail",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "They failed ",
+      "target": "to arrive",
+      "suffix": " on time."
+    },
+    "translation_es": "No lograron llegar a tiempo.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_052",
+    "verb_id": "v_deserve",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "You deserve ",
+      "target": "to relax",
+      "suffix": "."
+    },
+    "translation_es": "Mereces relajarte.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_053",
+    "verb_id": "v_deserve",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "She deserves ",
+      "target": "to win",
+      "suffix": "."
+    },
+    "translation_es": "Ella merece ganar.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_054",
+    "verb_id": "v_hesitate",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "Don't hesitate ",
+      "target": "to ask",
+      "suffix": "."
+    },
+    "translation_es": "No dudes en preguntar.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_055",
+    "verb_id": "v_hesitate",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "She hesitated ",
+      "target": "to speak",
+      "suffix": "."
+    },
+    "translation_es": "Dudó en hablar.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_056",
+    "verb_id": "v_wish",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "I wish ",
+      "target": "to apply",
+      "suffix": " for the job."
+    },
+    "translation_es": "Deseo solicitar el trabajo.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_057",
+    "verb_id": "v_wish",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "We wish ",
+      "target": "to thank",
+      "suffix": " you."
+    },
+    "translation_es": "Deseamos agradecerte.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_058",
+    "verb_id": "v_arrange",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "They arranged ",
+      "target": "to meet",
+      "suffix": " at noon."
+    },
+    "translation_es": "Acordaron verse al mediodía.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_059",
+    "verb_id": "v_arrange",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "I'll arrange ",
+      "target": "to call",
+      "suffix": " you."
+    },
+    "translation_es": "Organizaré llamarte.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_060",
+    "verb_id": "v_consider",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "I'm considering ",
+      "target": "changing",
+      "suffix": " jobs."
+    },
+    "translation_es": "Estoy considerando cambiar de trabajo.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_061",
+    "verb_id": "v_consider",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "She considered ",
+      "target": "moving",
+      "suffix": " to Spain."
+    },
+    "translation_es": "Consideró mudarse a España.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_062",
+    "verb_id": "v_suggest",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "I suggest ",
+      "target": "leaving",
+      "suffix": " early."
+    },
+    "translation_es": "Sugiero salir temprano.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_063",
+    "verb_id": "v_suggest",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "He suggested ",
+      "target": "taking",
+      "suffix": " a taxi."
+    },
+    "translation_es": "Sugirió tomar un taxi.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_064",
+    "verb_id": "v_keep",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "Keep ",
+      "target": "trying",
+      "suffix": "!"
+    },
+    "translation_es": "¡Sigue intentando!",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_065",
+    "verb_id": "v_keep",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "She keeps ",
+      "target": "forgetting",
+      "suffix": " my name."
+    },
+    "translation_es": "Sigue olvidando mi nombre.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_066",
+    "verb_id": "v_mind",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "Do you mind ",
+      "target": "closing",
+      "suffix": " the window?"
+    },
+    "translation_es": "¿Te importa cerrar la ventana?",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_067",
+    "verb_id": "v_mind",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "I don't mind ",
+      "target": "waiting",
+      "suffix": "."
+    },
+    "translation_es": "No me importa esperar.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_068",
+    "verb_id": "v_imagine",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "Imagine ",
+      "target": "living",
+      "suffix": " here!"
+    },
+    "translation_es": "¡Imagina vivir aquí!",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_069",
+    "verb_id": "v_imagine",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "I can't imagine ",
+      "target": "doing",
+      "suffix": " that."
+    },
+    "translation_es": "No me imagino haciendo eso.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_070",
+    "verb_id": "v_recommend",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "I recommend ",
+      "target": "reading",
+      "suffix": " this book."
+    },
+    "translation_es": "Recomiendo leer este libro.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_071",
+    "verb_id": "v_recommend",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "She recommended ",
+      "target": "seeing",
+      "suffix": " a doctor."
+    },
+    "translation_es": "Recomendó ver a un médico.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_072",
+    "verb_id": "v_admit",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "He admitted ",
+      "target": "making",
+      "suffix": " a mistake."
+    },
+    "translation_es": "Admitió cometer un error.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_073",
+    "verb_id": "v_admit",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "She won't admit ",
+      "target": "losing",
+      "suffix": "."
+    },
+    "translation_es": "No admitirá haber perdido.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_074",
+    "verb_id": "v_deny",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "He denied ",
+      "target": "taking",
+      "suffix": " the money."
+    },
+    "translation_es": "Negó haber cogido el dinero.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_075",
+    "verb_id": "v_deny",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "They denied ",
+      "target": "knowing",
+      "suffix": " him."
+    },
+    "translation_es": "Negaron conocerlo.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_076",
+    "verb_id": "v_practice",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "I practice ",
+      "target": "playing",
+      "suffix": " piano daily."
+    },
+    "translation_es": "Practico tocar el piano a diario.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_077",
+    "verb_id": "v_practice",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "She is practicing ",
+      "target": "speaking",
+      "suffix": " English."
+    },
+    "translation_es": "Está practicando hablar inglés.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_078",
+    "verb_id": "v_postpone",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "We postponed ",
+      "target": "having",
+      "suffix": " the meeting."
+    },
+    "translation_es": "Pospusimos tener la reunión.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_079",
+    "verb_id": "v_postpone",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "They postponed ",
+      "target": "leaving",
+      "suffix": "."
+    },
+    "translation_es": "Pospusieron irse.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_080",
+    "verb_id": "v_risk",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "Don't risk ",
+      "target": "losing",
+      "suffix": " your job."
+    },
+    "translation_es": "No arriesgues perder tu trabajo.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_081",
+    "verb_id": "v_risk",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "He risked ",
+      "target": "missing",
+      "suffix": " the train."
+    },
+    "translation_es": "Arriesgó perder el tren.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_082",
+    "verb_id": "v_mention",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "She mentioned ",
+      "target": "seeing",
+      "suffix": " him yesterday."
+    },
+    "translation_es": "Mencionó haberlo visto ayer.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_083",
+    "verb_id": "v_mention",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "Did you mention ",
+      "target": "paying",
+      "suffix": " online?"
+    },
+    "translation_es": "¿Mencionaste pagar en línea?",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_084",
+    "verb_id": "v_miss",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "I miss ",
+      "target": "seeing",
+      "suffix": " my friends."
+    },
+    "translation_es": "Extraño ver a mis amigos.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_085",
+    "verb_id": "v_miss",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "She missed ",
+      "target": "catching",
+      "suffix": " the bus."
+    },
+    "translation_es": "Perdió el autobús (no lo alcanzó).",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_086",
+    "verb_id": "v_appreciate",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "I appreciate ",
+      "target": "having",
+      "suffix": " your help."
+    },
+    "translation_es": "Aprecio tener tu ayuda.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_087",
+    "verb_id": "v_appreciate",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "We appreciate ",
+      "target": "hearing",
+      "suffix": " from you."
+    },
+    "translation_es": "Apreciamos saber de ti.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_088",
+    "verb_id": "v_resist",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "I couldn't resist ",
+      "target": "eating",
+      "suffix": " the cake."
+    },
+    "translation_es": "No pude resistir comerme el pastel.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_089",
+    "verb_id": "v_resist",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "She resisted ",
+      "target": "saying",
+      "suffix": " anything."
+    },
+    "translation_es": "Se resistió a decir algo.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_090",
+    "verb_id": "v_cant_help",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "I can't help ",
+      "target": "laughing",
+      "suffix": "."
+    },
+    "translation_es": "No puedo evitar reírme.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_091",
+    "verb_id": "v_cant_help",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "She can't help ",
+      "target": "worrying",
+      "suffix": "."
+    },
+    "translation_es": "No puede evitar preocuparse.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_092",
+    "verb_id": "v_continue",
+    "pattern_id": "pat_both_same",
+    "sentence_parts": {
+      "prefix": "We continued ",
+      "target": "working",
+      "suffix": " after lunch."
+    },
+    "translation_es": "Seguimos trabajando después del almuerzo.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_093",
+    "verb_id": "v_continue",
+    "pattern_id": "pat_both_same",
+    "sentence_parts": {
+      "prefix": "She continued ",
+      "target": "to study",
+      "suffix": " at night."
+    },
+    "translation_es": "Siguió estudiando por la noche.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_094",
+    "verb_id": "v_like",
+    "pattern_id": "pat_both_same",
+    "sentence_parts": {
+      "prefix": "I like ",
+      "target": "reading",
+      "suffix": " novels."
+    },
+    "translation_es": "Me gusta leer novelas.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_095",
+    "verb_id": "v_like",
+    "pattern_id": "pat_both_same",
+    "sentence_parts": {
+      "prefix": "I like ",
+      "target": "to read",
+      "suffix": " in the morning."
+    },
+    "translation_es": "Me gusta leer por la mañana.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_096",
+    "verb_id": "v_love",
+    "pattern_id": "pat_both_same",
+    "sentence_parts": {
+      "prefix": "They love ",
+      "target": "traveling",
+      "suffix": " in summer."
+    },
+    "translation_es": "Les encanta viajar en verano.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_097",
+    "verb_id": "v_love",
+    "pattern_id": "pat_both_same",
+    "sentence_parts": {
+      "prefix": "He loves ",
+      "target": "to cook",
+      "suffix": " on Sundays."
+    },
+    "translation_es": "Le encanta cocinar los domingos.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_098",
+    "verb_id": "v_hate",
+    "pattern_id": "pat_both_same",
+    "sentence_parts": {
+      "prefix": "I hate ",
+      "target": "waiting",
+      "suffix": " in lines."
+    },
+    "translation_es": "Odio esperar en filas.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_099",
+    "verb_id": "v_hate",
+    "pattern_id": "pat_both_same",
+    "sentence_parts": {
+      "prefix": "She hates ",
+      "target": "to be",
+      "suffix": " late."
+    },
+    "translation_es": "Odia llegar tarde.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_100",
+    "verb_id": "v_prefer",
+    "pattern_id": "pat_both_same",
+    "sentence_parts": {
+      "prefix": "I prefer ",
+      "target": "walking",
+      "suffix": " to driving."
+    },
+    "translation_es": "Prefiero caminar a conducir.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_101",
+    "verb_id": "v_prefer",
+    "pattern_id": "pat_both_same",
+    "sentence_parts": {
+      "prefix": "We prefer ",
+      "target": "to eat",
+      "suffix": " early."
+    },
+    "translation_es": "Preferimos comer temprano.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_102",
+    "verb_id": "v_cant_bear",
+    "pattern_id": "pat_both_same",
+    "sentence_parts": {
+      "prefix": "I can't bear ",
+      "target": "watching",
+      "suffix": " sad films."
+    },
+    "translation_es": "No soporto ver películas tristes.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_103",
+    "verb_id": "v_cant_bear",
+    "pattern_id": "pat_both_same",
+    "sentence_parts": {
+      "prefix": "She can't bear ",
+      "target": "to hear",
+      "suffix": " that noise."
+    },
+    "translation_es": "No soporta oír ese ruido.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_104",
+    "verb_id": "v_remember",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "Please remember ",
+      "target": "to bring",
+      "suffix": " your ID."
+    },
+    "translation_es": "Por favor recuerda traer tu identificación.",
+    "level": "A2",
+    "focus": "meaning_change",
+    "is_tricky": true
+  },
+  {
+    "id": "ex_105",
+    "verb_id": "v_forget",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "I'll never forget ",
+      "target": "meeting",
+      "suffix": " her that day."
+    },
+    "translation_es": "Nunca olvidaré haberla conocido ese día.",
+    "level": "A2",
+    "focus": "meaning_change",
+    "is_tricky": true
+  },
+  {
+    "id": "ex_106",
+    "verb_id": "v_stop",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "Stop ",
+      "target": "talking",
+      "suffix": " and listen."
+    },
+    "translation_es": "Deja de hablar y escucha.",
+    "level": "A2",
+    "focus": "meaning_change",
+    "is_tricky": true
+  },
+  {
+    "id": "ex_107",
+    "verb_id": "v_decide",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "We decided ",
+      "target": "to leave",
+      "suffix": " early."
+    },
+    "translation_es": "Decidimos irnos temprano.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_108",
+    "verb_id": "v_try",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "Try ",
+      "target": "turning",
+      "suffix": " it off and on."
+    },
+    "translation_es": "Prueba apagarlo y encenderlo.",
+    "level": "A2",
+    "focus": "meaning_change",
+    "is_tricky": true
+  },
+  {
+    "id": "ex_109",
+    "verb_id": "v_try",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "I tried ",
+      "target": "to understand",
+      "suffix": "."
+    },
+    "translation_es": "Intenté entender.",
+    "level": "A2",
+    "focus": "meaning_change",
+    "is_tricky": true
+  },
+  {
+    "id": "ex_110",
+    "verb_id": "v_regret",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "I regret ",
+      "target": "telling",
+      "suffix": " him."
+    },
+    "translation_es": "Lamento habérselo dicho.",
+    "level": "A2",
+    "focus": "meaning_change",
+    "is_tricky": true
+  },
+  {
+    "id": "ex_111",
+    "verb_id": "v_regret",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "We regret ",
+      "target": "to announce",
+      "suffix": " the delay."
+    },
+    "translation_es": "Lamentamos anunciar el retraso.",
+    "level": "A2",
+    "focus": "meaning_change",
+    "is_tricky": true
+  },
+  {
+    "id": "ex_112",
+    "verb_id": "v_mean",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "I didn't mean ",
+      "target": "to shout",
+      "suffix": "."
+    },
+    "translation_es": "No quise gritar.",
+    "level": "A2",
+    "focus": "meaning_change",
+    "is_tricky": true
+  },
+  {
+    "id": "ex_113",
+    "verb_id": "v_mean",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "Your help means ",
+      "target": "saving",
+      "suffix": " time."
+    },
+    "translation_es": "Tu ayuda supone ahorrar tiempo.",
+    "level": "A2",
+    "focus": "meaning_change",
+    "is_tricky": true
+  },
+  {
+    "id": "ex_114",
+    "verb_id": "v_go_on",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "Go on ",
+      "target": "eating",
+      "suffix": " if you like."
+    },
+    "translation_es": "Sigue comiendo si quieres.",
+    "level": "A2",
+    "focus": "meaning_change",
+    "is_tricky": true
+  },
+  {
+    "id": "ex_115",
+    "verb_id": "v_go_on",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "After the break, she went on ",
+      "target": "to explain",
+      "suffix": " the plan."
+    },
+    "translation_es": "Tras el descanso, siguió explicando el plan.",
+    "level": "A2",
+    "focus": "meaning_change",
+    "is_tricky": true
+  },
+  {
+    "id": "ex_116",
+    "verb_id": "v_enjoy",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "They enjoy ",
+      "target": "playing",
+      "suffix": " board games on Fridays."
+    },
+    "translation_es": "Disfrutan jugar juegos de mesa los viernes.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
   }
 ]

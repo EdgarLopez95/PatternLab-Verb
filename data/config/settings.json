@@ -1,18 +1,29 @@
 {
   "defaultMode": "home",
   "selection": {
-    "recentBufferSize": 4
+    "recentBufferSize": 4,
+    "useTierWeights": true,
+    "tierWeights": {
+      "core": 3,
+      "secondary": 1.5,
+      "extended": 0.5,
+      "default": 1
+    }
   },
   "practice": {
-    "shuffleOptions": true
+    "shuffleOptions": true,
+    "includePrepGerundInGeneralPool": false
   },
   "speed": {
-    "secondsPerQuestion": 25,
-    "autoAdvanceOnTimeout": true,
-    "exerciseTypes": ["multiple_choice", "fill_blank"]
+    "secondsPerQuestion": 10,
+    "postAnswerDelayMsCorrect": 550,
+    "postAnswerDelayMsWrong": 900,
+    "postAnswerDelayMsTimeout": 1100,
+    "recentBufferSize": 4
   },
   "mixed": {
-    "trickyWeight": 0.45,
+    "trickyWeight": 0.48,
+    "includePrepGerund": false,
     "shuffleOptions": true,
     "rotateTypes": true,
     "typeOrder": [
@@ -28,8 +39,9 @@
   },
   "ui": {
     "appTitle": "PatternLab Verbs",
-    "fillBlankPlaceholder": "e.g. -ing or to + verb",
+    "fillBlankPlaceholder": "e.g. going or to go",
     "enterToAdvanceOnCorrect": false,
-    "showSessionStats": false
+    "showSessionStats": false,
+    "showPracticeScoreCounters": true
   }
 }

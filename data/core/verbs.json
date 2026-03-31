@@ -1,47 +1,995 @@
 [
   {
-    "id": "v_remember",
-    "base_form": "remember",
-    "translation_es": "recordar",
-    "pattern_behavior": "both_change",
-    "pattern_usages": ["pat_gerund", "pat_infinitive"],
-    "category_ids": ["cat_cognition"],
-    "tag_ids": ["tag_meaning_change"]
+    "id": "v_admit",
+    "base_form": "admit",
+    "translation_es": "admitir",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 10
   },
   {
-    "id": "v_enjoy",
-    "base_form": "enjoy",
-    "translation_es": "disfrutar",
+    "id": "v_afford",
+    "base_form": "afford",
+    "translation_es": "poder permitirse",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "secondary",
+    "source_rank": 13
+  },
+  {
+    "id": "v_agree",
+    "base_form": "agree",
+    "translation_es": "aceptar / estar de acuerdo",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 9
+  },
+  {
+    "id": "v_appear",
+    "base_form": "appear",
+    "translation_es": "parecer / aparecer",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_cognition"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "secondary",
+    "source_rank": 15
+  },
+  {
+    "id": "v_appreciate",
+    "base_form": "appreciate",
+    "translation_es": "apreciar",
     "pattern_behavior": "only_gerund",
-    "pattern_usages": ["pat_gerund"],
-    "category_ids": ["cat_preference"],
-    "tag_ids": ["tag_a2"]
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "extended",
+    "source_rank": 17
+  },
+  {
+    "id": "v_arrange",
+    "base_form": "arrange",
+    "translation_es": "organizar / acordar",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "extended",
+    "source_rank": 24
+  },
+  {
+    "id": "v_attempt",
+    "base_form": "attempt",
+    "translation_es": "intentar",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "extended",
+    "source_rank": 19
+  },
+  {
+    "id": "v_avoid",
+    "base_form": "avoid",
+    "translation_es": "evitar",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 2
+  },
+  {
+    "id": "v_begin",
+    "base_form": "begin",
+    "translation_es": "empezar",
+    "pattern_behavior": "both_same",
+    "pattern_usages": [
+      "pat_both_same"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 1
+  },
+  {
+    "id": "v_cant_bear",
+    "base_form": "can't bear",
+    "translation_es": "no soportar",
+    "pattern_behavior": "both_same",
+    "pattern_usages": [
+      "pat_both_same"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "secondary",
+    "source_rank": 8
+  },
+  {
+    "id": "v_cant_help",
+    "base_form": "can't help",
+    "translation_es": "no poder evitar",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "extended",
+    "source_rank": 19
+  },
+  {
+    "id": "v_choose",
+    "base_form": "choose",
+    "translation_es": "elegir",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 6
+  },
+  {
+    "id": "v_consider",
+    "base_form": "consider",
+    "translation_es": "considerar",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_cognition"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 3
+  },
+  {
+    "id": "v_continue",
+    "base_form": "continue",
+    "translation_es": "continuar",
+    "pattern_behavior": "both_same",
+    "pattern_usages": [
+      "pat_both_same"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 3
   },
   {
     "id": "v_decide",
     "base_form": "decide",
     "translation_es": "decidir",
     "pattern_behavior": "only_infinitive",
-    "pattern_usages": ["pat_infinitive"],
-    "category_ids": ["cat_action"],
-    "tag_ids": ["tag_a2"]
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 3
   },
   {
-    "id": "v_stop",
-    "base_form": "stop",
-    "translation_es": "detener(se) / parar",
-    "pattern_behavior": "both_change",
-    "pattern_usages": ["pat_gerund", "pat_infinitive"],
-    "category_ids": ["cat_action"],
-    "tag_ids": ["tag_meaning_change"]
+    "id": "v_deny",
+    "base_form": "deny",
+    "translation_es": "negar",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "secondary",
+    "source_rank": 11
+  },
+  {
+    "id": "v_deserve",
+    "base_form": "deserve",
+    "translation_es": "merecer",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "extended",
+    "source_rank": 21
+  },
+  {
+    "id": "v_enjoy",
+    "base_form": "enjoy",
+    "translation_es": "disfrutar",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 1
+  },
+  {
+    "id": "v_expect",
+    "base_form": "expect",
+    "translation_es": "esperar (prever)",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_cognition"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 7
+  },
+  {
+    "id": "v_fail",
+    "base_form": "fail",
+    "translation_es": "fallar / no lograr",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "extended",
+    "source_rank": 20
+  },
+  {
+    "id": "v_finish",
+    "base_form": "finish",
+    "translation_es": "terminar",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 6
   },
   {
     "id": "v_forget",
     "base_form": "forget",
     "translation_es": "olvidar",
     "pattern_behavior": "both_change",
-    "pattern_usages": ["pat_gerund", "pat_infinitive"],
-    "category_ids": ["cat_cognition"],
-    "tag_ids": ["tag_meaning_change"]
+    "pattern_usages": [
+      "pat_gerund",
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_meaning_change"
+    ],
+    "learning_tier": "core",
+    "source_rank": 2
+  },
+  {
+    "id": "v_go_on",
+    "base_form": "go on",
+    "translation_es": "continuar / pasar a otra cosa",
+    "pattern_behavior": "both_change",
+    "pattern_usages": [
+      "pat_gerund",
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_meaning_change"
+    ],
+    "learning_tier": "core",
+    "source_rank": 7
+  },
+  {
+    "id": "v_hate",
+    "base_form": "hate",
+    "translation_es": "odiar",
+    "pattern_behavior": "both_same",
+    "pattern_usages": [
+      "pat_both_same"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 6
+  },
+  {
+    "id": "v_hesitate",
+    "base_form": "hesitate",
+    "translation_es": "dudar / vacilar",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "extended",
+    "source_rank": 22
+  },
+  {
+    "id": "v_hope",
+    "base_form": "hope",
+    "translation_es": "esperar (deseo)",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_cognition"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 4
+  },
+  {
+    "id": "v_imagine",
+    "base_form": "imagine",
+    "translation_es": "imaginar",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_cognition"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 8
+  },
+  {
+    "id": "v_intend",
+    "base_form": "intend",
+    "translation_es": "tener la intención de",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "extended",
+    "source_rank": 18
+  },
+  {
+    "id": "v_keep",
+    "base_form": "keep",
+    "translation_es": "seguir / mantener",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 5
+  },
+  {
+    "id": "v_learn",
+    "base_form": "learn",
+    "translation_es": "aprender",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "secondary",
+    "source_rank": 10
+  },
+  {
+    "id": "v_like",
+    "base_form": "like",
+    "translation_es": "gustar",
+    "pattern_behavior": "both_same",
+    "pattern_usages": [
+      "pat_both_same"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 4
+  },
+  {
+    "id": "v_love",
+    "base_form": "love",
+    "translation_es": "encantar",
+    "pattern_behavior": "both_same",
+    "pattern_usages": [
+      "pat_both_same"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 5
+  },
+  {
+    "id": "v_manage",
+    "base_form": "manage",
+    "translation_es": "lograr",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 11
+  },
+  {
+    "id": "v_mean",
+    "base_form": "mean",
+    "translation_es": "tener la intención / implicar",
+    "pattern_behavior": "both_change",
+    "pattern_usages": [
+      "pat_gerund",
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_meaning_change"
+    ],
+    "learning_tier": "core",
+    "source_rank": 6
+  },
+  {
+    "id": "v_mention",
+    "base_form": "mention",
+    "translation_es": "mencionar",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "secondary",
+    "source_rank": 15
+  },
+  {
+    "id": "v_mind",
+    "base_form": "mind",
+    "translation_es": "importar / molestar",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_cognition"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 7
+  },
+  {
+    "id": "v_miss",
+    "base_form": "miss",
+    "translation_es": "extrañar / perderse",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "extended",
+    "source_rank": 16
+  },
+  {
+    "id": "v_need",
+    "base_form": "need",
+    "translation_es": "necesitar",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 2
+  },
+  {
+    "id": "v_offer",
+    "base_form": "offer",
+    "translation_es": "ofrecer",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "extended",
+    "source_rank": 16
+  },
+  {
+    "id": "v_plan",
+    "base_form": "plan",
+    "translation_es": "planear / planificar",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 5
+  },
+  {
+    "id": "v_postpone",
+    "base_form": "postpone",
+    "translation_es": "posponer",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "secondary",
+    "source_rank": 13
+  },
+  {
+    "id": "v_practice",
+    "base_form": "practice",
+    "translation_es": "practicar",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "secondary",
+    "source_rank": 12
+  },
+  {
+    "id": "v_prefer",
+    "base_form": "prefer",
+    "translation_es": "preferir",
+    "pattern_behavior": "both_same",
+    "pattern_usages": [
+      "pat_both_same"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 7
+  },
+  {
+    "id": "v_prepare",
+    "base_form": "prepare",
+    "translation_es": "prepararse",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "extended",
+    "source_rank": 17
+  },
+  {
+    "id": "v_promise",
+    "base_form": "promise",
+    "translation_es": "prometer",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 8
+  },
+  {
+    "id": "v_recommend",
+    "base_form": "recommend",
+    "translation_es": "recomendar",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 9
+  },
+  {
+    "id": "v_refuse",
+    "base_form": "refuse",
+    "translation_es": "negarse",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "secondary",
+    "source_rank": 12
+  },
+  {
+    "id": "v_regret",
+    "base_form": "regret",
+    "translation_es": "lamentar / arrepentirse",
+    "pattern_behavior": "both_change",
+    "pattern_usages": [
+      "pat_gerund",
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_meaning_change"
+    ],
+    "learning_tier": "core",
+    "source_rank": 5
+  },
+  {
+    "id": "v_remember",
+    "base_form": "remember",
+    "translation_es": "recordar",
+    "pattern_behavior": "both_change",
+    "pattern_usages": [
+      "pat_gerund",
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_meaning_change"
+    ],
+    "learning_tier": "core",
+    "source_rank": 1
+  },
+  {
+    "id": "v_resist",
+    "base_form": "resist",
+    "translation_es": "resistir",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "extended",
+    "source_rank": 18
+  },
+  {
+    "id": "v_risk",
+    "base_form": "risk",
+    "translation_es": "arriesgar",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "secondary",
+    "source_rank": 14
+  },
+  {
+    "id": "v_seem",
+    "base_form": "seem",
+    "translation_es": "parecer",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_cognition"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "secondary",
+    "source_rank": 14
+  },
+  {
+    "id": "v_start",
+    "base_form": "start",
+    "translation_es": "comenzar",
+    "pattern_behavior": "both_same",
+    "pattern_usages": [
+      "pat_both_same"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 2
+  },
+  {
+    "id": "v_stop",
+    "base_form": "stop",
+    "translation_es": "parar / dejar",
+    "pattern_behavior": "both_change",
+    "pattern_usages": [
+      "pat_gerund",
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_meaning_change"
+    ],
+    "learning_tier": "core",
+    "source_rank": 3
+  },
+  {
+    "id": "v_suggest",
+    "base_form": "suggest",
+    "translation_es": "sugerir",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": [
+      "pat_gerund"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 4
+  },
+  {
+    "id": "v_try",
+    "base_form": "try",
+    "translation_es": "intentar / probar",
+    "pattern_behavior": "both_change",
+    "pattern_usages": [
+      "pat_gerund",
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_meaning_change"
+    ],
+    "learning_tier": "core",
+    "source_rank": 4
+  },
+  {
+    "id": "v_want",
+    "base_form": "want",
+    "translation_es": "querer",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_action"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "core",
+    "source_rank": 1
+  },
+  {
+    "id": "v_wish",
+    "base_form": "wish",
+    "translation_es": "desear",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": [
+      "pat_infinitive"
+    ],
+    "category_ids": [
+      "cat_cognition"
+    ],
+    "tag_ids": [
+      "tag_a2"
+    ],
+    "learning_tier": "extended",
+    "source_rank": 23
   }
 ]

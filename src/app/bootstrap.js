@@ -5,6 +5,7 @@ import { parseRoute, startRouter } from "./router.js";
 import { renderHome } from "../features/home/homeView.js";
 import { mountLearn } from "../features/learn/learnView.js";
 import { mountPractice } from "../features/practice/practiceView.js";
+import { mountSpeedDrill } from "../features/practice/speedDrillView.js";
 
 const PRACTICE_MODES = ["practice", "tricky", "mixed", "speed"];
 
@@ -30,7 +31,11 @@ export async function bootstrap() {
         route.patternId && catalog.patternsById[route.patternId]
           ? route.patternId
           : null;
-      mountPractice(app, catalog, mode, patternId);
+      if (mode === "speed") {
+        mountSpeedDrill(app, catalog, patternId);
+      } else {
+        mountPractice(app, catalog, mode, patternId);
+      }
     } else {
       renderHome(app, catalog);
     }

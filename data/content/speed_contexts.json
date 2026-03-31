@@ -1,0 +1,86 @@
+[
+  {
+    "id": "sc_remember_past",
+    "verb_id": "v_remember",
+    "context_label": "Something you did before",
+    "expected": "gerund"
+  },
+  {
+    "id": "sc_remember_future",
+    "verb_id": "v_remember",
+    "context_label": "Something to do later",
+    "expected": "infinitive"
+  },
+  {
+    "id": "sc_stop_quit",
+    "verb_id": "v_stop",
+    "context_label": "Stop an activity",
+    "expected": "gerund"
+  },
+  {
+    "id": "sc_stop_purpose",
+    "verb_id": "v_stop",
+    "context_label": "Stop to do something",
+    "expected": "infinitive"
+  },
+  {
+    "id": "sc_forget_past",
+    "verb_id": "v_forget",
+    "context_label": "Something you did before",
+    "expected": "gerund"
+  },
+  {
+    "id": "sc_forget_future",
+    "verb_id": "v_forget",
+    "context_label": "Something to do later",
+    "expected": "infinitive"
+  },
+  {
+    "id": "sc_try_test",
+    "verb_id": "v_try",
+    "context_label": "Test this / try it out",
+    "expected": "gerund"
+  },
+  {
+    "id": "sc_try_effort",
+    "verb_id": "v_try",
+    "context_label": "Make an effort",
+    "expected": "infinitive"
+  },
+  {
+    "id": "sc_regret_past",
+    "verb_id": "v_regret",
+    "context_label": "Something in the past",
+    "expected": "gerund"
+  },
+  {
+    "id": "sc_regret_formal",
+    "verb_id": "v_regret",
+    "context_label": "Formal bad news",
+    "expected": "infinitive"
+  },
+  {
+    "id": "sc_mean_intend",
+    "verb_id": "v_mean",
+    "context_label": "Did not intend",
+    "expected": "infinitive"
+  },
+  {
+    "id": "sc_mean_involve",
+    "verb_id": "v_mean",
+    "context_label": "What it involves",
+    "expected": "gerund"
+  },
+  {
+    "id": "sc_goon_same",
+    "verb_id": "v_go_on",
+    "context_label": "Continue same activity",
+    "expected": "gerund"
+  },
+  {
+    "id": "sc_goon_next",
+    "verb_id": "v_go_on",
+    "context_label": "Next thing you do",
+    "expected": "infinitive"
+  }
+]

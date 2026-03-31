@@ -4,6 +4,8 @@ const FILES = {
   examples: "data/content/examples.json",
   exercises: "data/exercises/exercises.json",
   feedback: "data/content/feedback.json",
+  speedContexts: "data/content/speed_contexts.json",
+  prepGerundCollocations: "data/content/prep_gerund_collocations.json",
   settings: "data/config/settings.json",
 };
 

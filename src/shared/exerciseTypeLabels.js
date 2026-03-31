@@ -6,7 +6,7 @@ export function labelForExerciseType(type) {
     case "multiple_choice":
       return "Multiple choice";
     case "verb_pattern_behavior":
-      return "Verb behavior";
+      return "Which form? (-ing or to + verb)";
     default:
       return "Exercise";
   }

@@ -1,50 +1,152 @@
 [
   {
     "id": "fb_remember_gerund",
-    "title": "Gerund after remember",
-    "body": "Here, remember is followed by **-ing** because you recall a past experience (you remember doing the activity). With **to + verb**, remember means remembering to do something in the future.",
+    "title": "Remember + -ing (the past)",
+    "body": "Here, **remember** is followed by **-ing** because you recall something you did before (**remember doing** it). With **to + verb**, **remember** means you must not forget to do something later.",
     "hint": "Past memory → remember + -ing."
   },
   {
     "id": "fb_enjoy_gerund",
     "title": "Enjoy + -ing",
-    "body": "**Enjoy** is typically followed by a gerund (**-ing**), not by an infinitive.",
+    "body": "**Enjoy** is usually followed by **-ing**, not **to + verb**.",
     "hint": "After enjoy, use the -ing form."
   },
   {
     "id": "fb_decide_infinitive",
-    "title": "Decide + to infinitive",
-    "body": "**Decide** is followed by **to + base verb** to express a decision about a future action.",
+    "title": "Decide + to + verb",
+    "body": "**Decide** is followed by **to + verb** when you talk about a choice about a future action.",
     "hint": "Decide → to + verb."
   },
   {
     "id": "fb_stop_infinitive",
-    "title": "Stop + to infinitive (purpose)",
-    "body": "**Stopped to eat** means we stopped for the purpose of eating. **Stop + -ing** means quitting an ongoing activity. The infinitive shows **purpose** after **stop**.",
+    "title": "Stop + to + verb (purpose)",
+    "body": "**Stopped to eat** means we stopped so we could eat. **Stop + -ing** means we quit an activity. After **stop**, **to + verb** can show **why** you stopped.",
     "hint": "Purpose after stop → to + verb."
   },
   {
     "id": "fb_forget_infinitive",
-    "title": "Forget + to infinitive",
-    "body": "**Don't forget to practice** refers to something to do later. **Forget + -ing** means forgetting something that happened (a memory).",
+    "title": "Forget + to + verb",
+    "body": "**Don't forget to practice** means something you still need to do. **Forget + -ing** means you forgot something that already happened.",
     "hint": "Future task not done → forget + to + verb."
   },
   {
     "id": "fb_stop_behavior",
-    "title": "Verb pattern type",
-    "body": "**Stop** can take both **-ing** and **to** infinitive; the meaning changes with the structure.",
-    "hint": "This verb is in the “both / meaning changes” group."
+    "title": "Stop: two different forms",
+    "body": "**Stop** can use both **-ing** and **to + verb**. The meaning depends on which form you use.",
+    "hint": "This verb can use both forms; the meaning changes."
   },
   {
     "id": "fb_generic_correct",
     "title": "Correct",
-    "body": "You picked the right form. Read the explanation below to lock in the rule.",
+    "body": "You picked the right form. Read the explanation below to learn the rule.",
     "hint": null
   },
   {
     "id": "fb_generic_incorrect",
     "title": "Not quite",
-    "body": "Compare your answer with the correct pattern and review the feedback below.",
+    "body": "Compare your answer with the correct one. Read the notes below.",
     "hint": null
+  },
+  {
+    "id": "fb_pg_adj_prep",
+    "title": "Phrases like interested in, good at + -ing",
+    "body": "Phrases like **interested in**, **good at**, **tired of** are fixed. The next verb is usually **-ing**, not **to + verb**.",
+    "hint": "After this kind of phrase, use -ing."
+  },
+  {
+    "id": "fb_pg_subordinator",
+    "title": "After / before / without + -ing",
+    "body": "**After**, **before**, and **without** can introduce an action with **-ing** when we already know who did it (**After eating** can mean **after we ate**).",
+    "hint": "These words + action → often -ing."
+  },
+  {
+    "id": "fb_finish_gerund",
+    "title": "Finish + -ing",
+    "body": "**Finish** is followed by **-ing** when you talk about completing an activity (**finish doing** something).",
+    "hint": "After finish, use -ing."
+  },
+  {
+    "id": "fb_avoid_gerund",
+    "title": "Avoid + -ing",
+    "body": "**Avoid** is usually followed by **-ing**, not **to + verb**.",
+    "hint": "After avoid, use -ing."
+  },
+  {
+    "id": "fb_want_infinitive",
+    "title": "Want + to + verb",
+    "body": "**Want** is followed by **to + verb** when you talk about something you would like to do.",
+    "hint": "Want → to + verb."
+  },
+  {
+    "id": "fb_hope_infinitive",
+    "title": "Hope + to + verb",
+    "body": "**Hope** is often followed by **to + verb** when you talk about a future wish.",
+    "hint": "Hope → to + verb."
+  },
+  {
+    "id": "fb_agree_infinitive",
+    "title": "Agree + to + verb",
+    "body": "**Agree** is followed by **to + verb** when people decide to do something together.",
+    "hint": "Agree → to + verb."
+  },
+  {
+    "id": "fb_both_same",
+    "title": "Both forms (same idea)",
+    "body": "This verb often works with **-ing** **or** **to + verb**. The idea stays **similar**. It is **not** the same as **Tricky verbs** where the meaning **clearly changes**.",
+    "hint": "-ing or to + verb — both can be OK here."
+  },
+  {
+    "id": "fb_pat_infinitive_generic",
+    "title": "Verb + to + verb",
+    "body": "This verb is usually followed by **to + verb** in this lesson.",
+    "hint": "Use to + base verb after this verb."
+  },
+  {
+    "id": "fb_pat_gerund_generic",
+    "title": "Verb + -ing",
+    "body": "This verb is usually followed by **-ing** in this lesson.",
+    "hint": "Use the -ing form after this verb."
+  },
+  {
+    "id": "fb_try_behavior",
+    "title": "Try: two different ideas",
+    "body": "**Try + -ing** can mean *test something*. **Try + to + verb** often means *make an effort*.",
+    "hint": "Test or effort? -ing vs to + verb."
+  },
+  {
+    "id": "fb_regret_behavior",
+    "title": "Regret: past vs formal news",
+    "body": "**Regret + -ing** is about the **past**. **Regret + to + verb** is often formal bad news (**regret to inform**).",
+    "hint": "Past mistake → -ing. Formal message → to + verb."
+  },
+  {
+    "id": "fb_mean_behavior",
+    "title": "Mean: intend vs imply",
+    "body": "**Mean + to + verb** = intend. **Mean + -ing** (or clause) can express what something **involves**.",
+    "hint": "Intend → to + verb. Involve / imply → often -ing."
+  },
+  {
+    "id": "fb_go_on_behavior",
+    "title": "Go on: continue vs next topic",
+    "body": "**Go on + -ing** = continue the same activity. **Go on + to + verb** can mean continue **with a new action**.",
+    "hint": "Same activity → -ing. Next step → to + verb."
+  },
+  {
+    "id": "fb_remember_infinitive",
+    "title": "Remember + to + verb",
+    "body": "**Remember + to + verb** means *don't forget to do something later* (a future task).",
+    "hint": "Reminder for later → remember + to + verb."
+  },
+  {
+    "id": "fb_forget_gerund",
+    "title": "Forget + -ing (the past)",
+    "body": "**Forget + -ing** can mean you forgot something that **already happened**.",
+    "hint": "Past event forgotten → forget + -ing."
+  },
+  {
+    "id": "fb_stop_gerund",
+    "title": "Stop + -ing",
+    "body": "**Stop + -ing** means you **quit** an activity (**stop talking** = dejar de hablar).",
+    "hint": "Quit an activity → stop + -ing."
   }
 ]

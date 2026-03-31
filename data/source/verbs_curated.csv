@@ -1,0 +1,59 @@
+group,rank,verb,meaning_es,recommended,id
+solo_to,1,want,querer,yes,v_want
+solo_to,2,need,necesitar,yes,v_need
+solo_to,3,decide,decidir,yes,v_decide
+solo_to,4,hope,esperar (deseo),yes,v_hope
+solo_to,5,plan,planear / planificar,yes,v_plan
+solo_to,6,choose,elegir,yes,v_choose
+solo_to,7,expect,esperar (prever),yes,v_expect
+solo_to,8,promise,prometer,yes,v_promise
+solo_to,9,agree,aceptar / estar de acuerdo,yes,v_agree
+solo_to,10,learn,aprender,no,v_learn
+solo_to,11,manage,lograr,yes,v_manage
+solo_to,12,refuse,negarse,no,v_refuse
+solo_to,13,afford,poder permitirse,no,v_afford
+solo_to,14,seem,parecer,no,v_seem
+solo_to,15,appear,parecer / aparecer,no,v_appear
+solo_to,16,offer,ofrecer,no,v_offer
+solo_to,17,prepare,prepararse,no,v_prepare
+solo_to,18,intend,tener la intención de,no,v_intend
+solo_to,19,attempt,intentar,no,v_attempt
+solo_to,20,fail,fallar / no lograr,no,v_fail
+solo_to,21,deserve,merecer,no,v_deserve
+solo_to,22,hesitate,dudar / vacilar,no,v_hesitate
+solo_to,23,wish,desear,no,v_wish
+solo_to,24,arrange,organizar / acordar,no,v_arrange
+solo_ing,1,enjoy,disfrutar,yes,v_enjoy
+solo_ing,2,avoid,evitar,yes,v_avoid
+solo_ing,3,consider,considerar,yes,v_consider
+solo_ing,4,suggest,sugerir,yes,v_suggest
+solo_ing,5,keep,seguir / mantener,yes,v_keep
+solo_ing,6,finish,terminar,yes,v_finish
+solo_ing,7,mind,importar / molestar,yes,v_mind
+solo_ing,8,imagine,imaginar,yes,v_imagine
+solo_ing,9,recommend,recomendar,yes,v_recommend
+solo_ing,10,admit,admitir,yes,v_admit
+solo_ing,11,deny,negar,no,v_deny
+solo_ing,12,practice,practicar,no,v_practice
+solo_ing,13,postpone,posponer,no,v_postpone
+solo_ing,14,risk,arriesgar,no,v_risk
+solo_ing,15,mention,mencionar,no,v_mention
+solo_ing,16,miss,extrañar / perderse,no,v_miss
+solo_ing,17,appreciate,apreciar,no,v_appreciate
+solo_ing,18,resist,resistir,no,v_resist
+solo_ing,19,can't help,no poder evitar,no,v_cant_help
+both_no_change,1,begin,empezar,yes,v_begin
+both_no_change,2,start,comenzar,yes,v_start
+both_no_change,3,continue,continuar,yes,v_continue
+both_no_change,4,like,gustar,yes,v_like
+both_no_change,5,love,encantar,yes,v_love
+both_no_change,6,hate,odiar,yes,v_hate
+both_no_change,7,prefer,preferir,yes,v_prefer
+both_no_change,8,can't bear,no soportar,no,v_cant_bear
+both_change,1,remember,recordar,yes,v_remember
+both_change,2,forget,olvidar,yes,v_forget
+both_change,3,stop,parar / dejar,yes,v_stop
+both_change,4,try,intentar / probar,yes,v_try
+both_change,5,regret,lamentar / arrepentirse,yes,v_regret
+both_change,6,mean,tener la intención / implicar,yes,v_mean
+both_change,7,go on,continuar / pasar a otra cosa,yes,v_go_on

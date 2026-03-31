@@ -14,6 +14,8 @@ Main data files currently include:
 - `data/core/verbs.json`
 - `data/core/patterns.json`
 - `data/content/examples.json`
+- `data/content/speed_contexts.json`
+- `data/content/prep_gerund_collocations.json`
 - `data/content/feedback.json`
 - `data/exercises/exercises.json`
 - `data/config/settings.json`
@@ -24,7 +26,11 @@ Main data files currently include:
 
 These JSON files are the structured foundation of the app.
 
-`exercises.json` entries with `type: "fill_blank"` may include optional `blank_lemma` (non-empty string) to override the UI hint next to the gap when automatic derivation from `correct_answer` is wrong (e.g. irregular **-ing** forms). `patterns.json` may include optional string fields `summary` and `contrast_note` (short pedagogical copy). Pattern `pat_both_change` is the Learn lesson for verbs with `pattern_behavior: both_change`; optional field `learn_kind: "both_change"` marks that lesson. Verbs must use `pattern_behavior` in `only_gerund`, `only_infinitive`, or `both_change`. `settings.json` may include `selection.recentBufferSize`, `mixed.rotateTypes`, `mixed.typeOrder`, `speed.exerciseTypes`, `tricky.requireVerbBothChange`, and under `ui`: `appTitle`, `fillBlankPlaceholder`, `enterToAdvanceOnCorrect`, `showSessionStats` (see `data/config/settings.json` and `docs/architecture/overview.md`).
+`exercises.json` entries with `type: "fill_blank"` may include optional `blank_lemma` (non-empty string) to override the UI hint next to the gap when automatic derivation from `correct_answer` is wrong (e.g. irregular **-ing** forms). `patterns.json` may include optional string fields `summary` and `contrast_note` (short pedagogical copy). Pattern `pat_both_change` is the Learn lesson for verbs with `pattern_behavior: both_change` (`learn_kind: "both_change"`). Pattern `pat_both_same` is for `pattern_behavior: both_same` (`learn_kind: "both_same"`). Verbs must use `pattern_behavior` in `only_gerund`, `only_infinitive`, `both_change`, or `both_same`. Each verb should have `learning_tier`: `core`, `secondary`, or `extended` (used for weighted exercise selection when enabled in `settings.json`).
+
+**Speed drill:** `speed_contexts.json` is an array of objects with stable `id`, `verb_id` (must exist in `verbs.json` and have `pattern_behavior: both_change`), short `context_label` (English micro-context), and `expected`: `"gerund"` or `"infinitive"`. `validate-data.mjs` requires at least one row per `both_change` verb.
+
+`settings.json` may include `selection.recentBufferSize`, `practice.includePrepGerundInGeneralPool`, `mixed.includePrepGerund`, `mixed.rotateTypes`, `mixed.typeOrder`, `tricky.requireVerbBothChange`, under `speed`: `secondsPerQuestion`, `postAnswerDelayMsCorrect`, `postAnswerDelayMsWrong`, `postAnswerDelayMsTimeout`, `recentBufferSize`, and under `ui`: `appTitle`, `fillBlankPlaceholder`, `enterToAdvanceOnCorrect`, `showSessionStats`, `showPracticeScoreCounters` (see `data/config/settings.json` and `docs/architecture/overview.md`).
 
 They must remain:
 - consistent

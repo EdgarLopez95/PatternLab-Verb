@@ -13,7 +13,8 @@ export function renderExerciseStem(container, model) {
     })</span>`;
     p.appendChild(document.createElement("br"));
     const q = document.createElement("span");
-    q.textContent = "What best describes how this verb combines with -ing vs to + verb?";
+    q.textContent =
+      "Does this verb usually take -ing or to + verb after it?";
     p.appendChild(q);
     container.appendChild(p);
     return;
@@ -88,7 +89,7 @@ export function renderFillBlank(formHost, onSubmit, opts = {}) {
   hint.id = hintId;
   hint.setAttribute("role", "alert");
   hint.hidden = true;
-  hint.textContent = "Please enter an answer";
+  hint.textContent = "Type your answer first.";
 
   const btn = document.createElement("button");
   btn.type = "button";

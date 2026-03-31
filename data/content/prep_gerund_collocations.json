@@ -1,0 +1,50 @@
+[
+  {
+    "id": "col_interested_in",
+    "display_phrase": "interested in",
+    "subcategory": "adj_prep",
+    "sort_order": 1
+  },
+  {
+    "id": "col_good_at",
+    "display_phrase": "good at",
+    "subcategory": "adj_prep",
+    "sort_order": 2
+  },
+  {
+    "id": "col_bad_at",
+    "display_phrase": "bad at",
+    "subcategory": "adj_prep",
+    "sort_order": 3
+  },
+  {
+    "id": "col_tired_of",
+    "display_phrase": "tired of",
+    "subcategory": "adj_prep",
+    "sort_order": 4
+  },
+  {
+    "id": "col_afraid_of",
+    "display_phrase": "afraid of",
+    "subcategory": "adj_prep",
+    "sort_order": 5
+  },
+  {
+    "id": "col_after",
+    "display_phrase": "after",
+    "subcategory": "subordinator",
+    "sort_order": 10
+  },
+  {
+    "id": "col_before",
+    "display_phrase": "before",
+    "subcategory": "subordinator",
+    "sort_order": 11
+  },
+  {
+    "id": "col_without",
+    "display_phrase": "without",
+    "subcategory": "subordinator",
+    "sort_order": 12
+  }
+]

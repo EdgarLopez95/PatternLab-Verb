@@ -1,8 +1,55 @@
 /**
- * Exercise pools and selection by mode. Practice = uniform random; Mixed = tricky
- * weight + optional type rotation; Tricky = dual-meaning filter with fallbacks;
- * Speed = optional type filter from settings.
+ * Exercise pools and selection by mode. Practice / Tricky use weighted random by
+ * `learning_tier` when `settings.selection.useTierWeights` is not false; Mixed
+ * adds tricky weight + optional type rotation. Speed drill uses speedTap (not this picker).
  */
+
+const PAT_PREP_GERUND = "pat_prep_gerund";
+
+/**
+ * @param {ReturnType<import('./buildCatalog.js').buildCatalog>} catalog
+ * @param {object} exercise
+ */
+export function isPrepGerundExercise(catalog, exercise) {
+  if (!exercise.example_id) return false;
+  const ex = catalog.examplesById[exercise.example_id];
+  return ex?.pattern_id === PAT_PREP_GERUND;
+}
+
+/**
+ * @param {ReturnType<import('./buildCatalog.js').buildCatalog>} catalog
+ * @param {object[]} exercises
+ * @param {'practice'|'tricky'|'mixed'|'speed'} mode
+ * @param {{ patternId?: string | null }} [filterOpts]
+ */
+function applyPrepGerundPoolRules(catalog, exercises, mode, filterOpts = {}) {
+  const pid = filterOpts?.patternId;
+  if (pid === PAT_PREP_GERUND) return exercises;
+
+  const drop = (q) => !isPrepGerundExercise(catalog, q);
+
+  if (mode === "tricky") {
+    return exercises.filter(drop);
+  }
+  if (mode === "mixed" && catalog.settings?.mixed?.includePrepGerund !== true) {
+    return exercises.filter(drop);
+  }
+  if (
+    mode === "practice" &&
+    !pid &&
+    catalog.settings?.practice?.includePrepGerundInGeneralPool !== true
+  ) {
+    return exercises.filter(drop);
+  }
+  if (
+    mode === "speed" &&
+    !pid &&
+    catalog.settings?.practice?.includePrepGerundInGeneralPool !== true
+  ) {
+    return exercises.filter(drop);
+  }
+  return exercises;
+}
 
 /**
  * @param {ReturnType<import('./buildCatalog.js').buildCatalog>} catalog
@@ -91,22 +138,15 @@ function applyPatternFilter(exercises, catalog, filterOpts) {
 export function getExercisePool(catalog, mode, filterOpts = {}) {
   let all = catalog.exercises.slice();
   all = applyPatternFilter(all, catalog, filterOpts);
+  all = applyPrepGerundPoolRules(catalog, all, mode, filterOpts);
 
   const tricky = all.filter((q) => isTrickyExercise(catalog, q));
   const nonTricky = all.filter((q) => !isTrickyExercise(catalog, q));
 
   switch (mode) {
     case "practice":
+    case "speed":
       return all.length ? all : [];
-    case "speed": {
-      let pool = all;
-      const types = catalog.settings?.speed?.exerciseTypes;
-      if (Array.isArray(types) && types.length > 0) {
-        const narrowed = pool.filter((q) => types.includes(q.type));
-        if (narrowed.length) pool = narrowed;
-      }
-      return pool.length ? pool : all;
-    }
     case "tricky": {
       const st = catalog.settings?.tricky || {};
       let cand = tricky;
@@ -139,6 +179,75 @@ function pickRandomExercise(pool, excludeId = null, recentIds = []) {
   if (!usable.length) usable = pool.slice();
   const i = Math.floor(Math.random() * usable.length);
   return usable[i];
+}
+
+/**
+ * @param {ReturnType<import('./buildCatalog.js').buildCatalog>} catalog
+ * @param {object} exercise
+ * @param {Record<string, number>} tierWeights
+ */
+function exerciseTierWeight(catalog, exercise, tierWeights) {
+  const vid = getVerbId(catalog, exercise);
+  if (!vid) {
+    const d = tierWeights.default;
+    return typeof d === "number" && d > 0 ? d : 1;
+  }
+  const v = catalog.verbsById[vid];
+  const tier = v?.learning_tier;
+  if (!tier) {
+    const d = tierWeights.default;
+    return typeof d === "number" && d > 0 ? d : 1;
+  }
+  const w = tierWeights[tier];
+  if (typeof w === "number" && w > 0) return w;
+  const d = tierWeights.default;
+  return typeof d === "number" && d > 0 ? d : 1;
+}
+
+/**
+ * @param {ReturnType<import('./buildCatalog.js').buildCatalog>} catalog
+ * @param {object[]} pool
+ * @param {string|null} excludeId
+ * @param {string[]} recentIds
+ */
+function pickWeightedExercise(catalog, pool, excludeId = null, recentIds = []) {
+  const avoid = new Set([excludeId, ...recentIds].filter(Boolean));
+  let usable = pool.filter((q) => !avoid.has(q.id));
+  if (!usable.length) {
+    usable = excludeId != null ? pool.filter((q) => q.id !== excludeId) : pool.slice();
+  }
+  if (!usable.length) usable = pool.slice();
+
+  const sel = catalog.settings?.selection || {};
+  const tw = {
+    core: 3,
+    secondary: 1.5,
+    extended: 0.5,
+    default: 1,
+    ...(typeof sel.tierWeights === "object" && sel.tierWeights ? sel.tierWeights : {}),
+  };
+
+  const weights = usable.map((q) => exerciseTierWeight(catalog, q, tw));
+  const sum = weights.reduce((a, b) => a + b, 0);
+  let r = Math.random() * sum;
+  for (let i = 0; i < usable.length; i++) {
+    r -= weights[i];
+    if (r <= 0) return usable[i];
+  }
+  return usable[usable.length - 1];
+}
+
+/**
+ * @param {ReturnType<import('./buildCatalog.js').buildCatalog>} catalog
+ * @param {object[]} pool
+ * @param {string|null} excludeId
+ * @param {string[]} recentIds
+ */
+function pickNextFromPool(catalog, pool, excludeId, recentIds) {
+  if (catalog.settings?.selection?.useTierWeights === false) {
+    return pickRandomExercise(pool, excludeId, recentIds);
+  }
+  return pickWeightedExercise(catalog, pool, excludeId, recentIds);
 }
 
 /**
@@ -187,11 +296,11 @@ export function pickNextExerciseId(
         if (byType.length) sub = byType;
       }
 
-      return pickRandomExercise(sub, excludeExerciseId, recent).id;
+      return pickNextFromPool(catalog, sub, excludeExerciseId, recent).id;
     }
   }
 
   const list = getExercisePool(catalog, mode, filterOpts);
   const pool = Array.isArray(list) ? list : list.all;
-  return pickRandomExercise(pool, excludeExerciseId, recent).id;
+  return pickNextFromPool(catalog, pool, excludeExerciseId, recent).id;
 }

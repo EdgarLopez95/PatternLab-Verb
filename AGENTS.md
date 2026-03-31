@@ -19,7 +19,9 @@ La lógica de la aplicación depende de relaciones consistentes entre estos arch
 
 - `data/core/verbs.json`
 - `data/core/patterns.json`
-- `data/content/examples.json`
+- `data/content/examples.json` (para `pat_prep_gerund`: `collocation_id` obligatorio, `verb_id` opcional)
+- `data/content/prep_gerund_collocations.json` (frases fijas para la lección Prep + -ing; `validate-data` exige ≥1 ejemplo por colocación)
+- `data/content/speed_contexts.json` (micro-contextos EN para verbos `both_change` en Speed drill; `validate-data` exige ≥1 fila por verbo `both_change`)
 - `data/exercises/exercises.json`
 
 El frontend debe consumir estos datos y renderizar ejercicios sin hardcodear contenido que ya exista en JSON.
@@ -41,7 +43,7 @@ El frontend debe consumir estos datos y renderizar ejercicios sin hardcodear con
 
 - `data/`
   - `core/` → datos base del sistema (`verbs.json`, `patterns.json`)
-  - `content/` → contenido pedagógico (`examples.json`)
+  - `content/` → contenido pedagógico (`examples.json`, `speed_contexts.json`)
   - `exercises/` → definición de ejercicios (`exercises.json`)
   - `config/` → configuración general (`settings.json`)
 - `src/` → lógica de aplicación y módulos de frontend
@@ -63,7 +65,7 @@ La fuente de verdad para datos y relaciones está en `data/`.
 Regla general:
 - `verbs.json` define verbos y sus relaciones principales
 - `patterns.json` define patrones gramaticales
-- `examples.json` conecta verbos + patrones + contenido de ejemplo
+- `examples.json` conecta patrones + contenido de ejemplo; en patrones clásicos enlaza `verb_id`; en `pat_prep_gerund` enlaza `collocation_id` (sin `verb_id` obligatorio)
 - `exercises.json` define la interacción usando referencias a ejemplos
 
 Si hay conflicto entre UI y datos, corrige primero los datos o adapta la UI sin romper la estructura base.
@@ -100,8 +102,9 @@ Si hay conflicto entre UI y datos, corrige primero los datos o adapta la UI sin 
 
 ## Práctica: selección y métricas de sesión
 
-- La selección de ejercicios usa `selection.recentBufferSize` y la lógica en `src/domain/exercisePicker.js`. Los ajustes permitidos en iteraciones pequeñas son principalmente **valores en `settings.json`** y documentación; no reescribir el algoritmo sin revisión explícita.
-- La UI puede mostrar contadores de sesión (`incorrectCount`, uso de “Show hint”) si `settings.ui.showSessionStats` es `true`. Son **solo memoria de la pestaña**; no sustituyen analytics ni persistencia.
+- **Practice, Mixed, Tricky:** selección con `selection.recentBufferSize` y `src/domain/exercisePicker.js` sobre `exercises.json`. Ajustes pequeños: valores en `settings.json` y documentación; no reescribir el algoritmo sin revisión explícita.
+- **Speed drill:** no usa el picker de ejercicios ni `renderExercise`. Pool y validación en `src/domain/speedTap.js` (verbos desde `verbs.json` + filas `speed_contexts.json` para `both_change`). Vista: `src/features/practice/speedDrillView.js`; montaje desde `bootstrap.js` cuando el modo es `speed`.
+- Contadores de sesión (solo memoria de la pestaña): **Correct / Wrong** en práctica clásica si `settings.ui.showPracticeScoreCounters` no es `false`; línea de **incorrectos + hints** si `settings.ui.showSessionStats` es `true`. Speed muestra su propia barra Correct/Wrong/tiempo.
 
 ## Verificación antes de dar una tarea por terminada
 
@@ -113,7 +116,7 @@ Antes de cerrar una tarea, verifica en lo posible:
 - que el cambio sea coherente con la estructura del repo
 - que no se haya introducido lógica duplicada
 - que el frontend siga funcionando sin errores obvios de runtime
-- en cambios de práctica: comprobar **Practice**, **Mixed**, **Tricky** y **Speed** al menos una pregunta cada uno; en **Learn**, las tres lecciones del índice
+- en cambios de práctica: comprobar **Practice**, **Mixed**, **Tricky** y **Speed** al menos una pregunta cada uno; en **Learn**, todas las lecciones del índice (incl. Prep + -ing)
 - ejecutar `node scripts/validate-data.mjs` cuando se toquen JSON en `data/`
 
 ## Definition of Done

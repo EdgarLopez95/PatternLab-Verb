@@ -9,17 +9,21 @@ function byId(arr) {
 
 /** @param {Record<string, unknown>} raw */
 export function buildCatalog(raw) {
+  const prepGerundCollocations = raw.prepGerundCollocations ?? [];
   return {
     verbs: raw.verbs,
     patterns: raw.patterns,
     examples: raw.examples,
     exercises: raw.exercises,
     feedback: raw.feedback,
+    speedContexts: raw.speedContexts ?? [],
+    prepGerundCollocations,
     settings: raw.settings,
     verbsById: byId(raw.verbs),
     patternsById: byId(raw.patterns),
     examplesById: byId(raw.examples),
     exercisesById: byId(raw.exercises),
     feedbackById: byId(raw.feedback),
+    prepGerundCollocationsById: byId(prepGerundCollocations),
   };
 }
