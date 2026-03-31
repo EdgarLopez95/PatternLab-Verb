@@ -20,6 +20,60 @@ const SUBCATEGORY_LABELS = {
   verb_prep: "Verb + small word (more later)",
 };
 
+/** Short lines under each lesson title on the Learn index (matches product copy). */
+const LEARN_CARD_SUBTITLES = {
+  pat_gerund: "Start here. The most common gerund form.",
+  pat_infinitive: "Next step. Mastering infinitive combinations.",
+  pat_both_change: "Verbs that change meaning based on the form.",
+  pat_both_same: "Extra: Verbs that accept either form.",
+  pat_prep_gerund: "Last: Using -ing after words like in or after.",
+};
+
+const LEARN_VISITED_KEY = "patternlab_learn_visited";
+
+function getLearnVisitedIds() {
+  try {
+    const raw = localStorage.getItem(LEARN_VISITED_KEY);
+    const arr = raw ? JSON.parse(raw) : [];
+    return Array.isArray(arr) ? new Set(arr.filter((x) => typeof x === "string")) : new Set();
+  } catch {
+    return new Set();
+  }
+}
+
+/** Call when the user opens a lesson detail page. */
+function markLessonVisited(patternId) {
+  const set = getLearnVisitedIds();
+  if (set.has(patternId)) return;
+  set.add(patternId);
+  try {
+    localStorage.setItem(LEARN_VISITED_KEY, JSON.stringify([...set]));
+  } catch {
+    /* ignore */
+  }
+}
+
+/**
+ * @param {number} index
+ * @param {string[]} orderIds
+ * @param {Set<string>} visited
+ * @returns {"completed"|"available"|"locked"}
+ */
+function learnLessonState(index, orderIds, visited) {
+  let firstIncomplete = 0;
+  while (firstIncomplete < orderIds.length && visited.has(orderIds[firstIncomplete])) {
+    firstIncomplete++;
+  }
+  if (index < firstIncomplete) return "completed";
+  if (index === firstIncomplete) return "available";
+  return "locked";
+}
+
+const ICON_CHEVRON = `<svg class="learn-lesson-card__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>`;
+const ICON_CHECK = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>`;
+const ICON_LOCK = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
+const ICON_ARROW_HOME = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>`;
+
 /**
  * @param {ReturnType<import('../../domain/buildCatalog.js').buildCatalog>} catalog
  * @param {string} lessonId
@@ -232,17 +286,69 @@ function buildPrepPhrasesSectionHtml(catalog, hintHtml) {
 }
 
 /**
+ * @param {ReturnType<import('../../domain/buildCatalog.js').buildCatalog>} catalog
+ */
+function buildLearnIndexInnerHtml(catalog) {
+  const orderIds = LEARN_INDEX_ORDER.filter((id) => catalog.patternsById[id]);
+  const n = orderIds.length;
+  const visited = getLearnVisitedIds();
+
+  const bannerHtml = `<div class="learn-index-banner" role="region" aria-label="How to use these lessons">
+    <span class="learn-index-banner__icon" aria-hidden="true">i</span>
+    <p class="learn-index-banner__text"><strong>${n} lessons.</strong> Start with <strong>Verb + -ing</strong> and <strong>Verb + to + verb</strong>, then <strong>Tricky verbs</strong>. <strong>Both forms (same idea)</strong> is extra. Last: <strong>-ing</strong> after small words like <em>in</em> or <em>after</em>.</p>
+  </div>
+  <div class="learn-lesson-list" role="list">`;
+
+  const parts = [bannerHtml];
+  for (let index = 0; index < orderIds.length; index++) {
+    const id = orderIds[index];
+    const p = catalog.patternsById[id];
+    if (!p) continue;
+    const state = learnLessonState(index, orderIds, visited);
+    const subtitle = LEARN_CARD_SUBTITLES[id] || "";
+    const badge =
+      state === "completed"
+        ? `<span class="learn-lesson-card__badge learn-lesson-card__badge--done" aria-hidden="true">${ICON_CHECK}</span>`
+        : state === "available"
+          ? `<span class="learn-lesson-card__badge learn-lesson-card__badge--num" aria-hidden="true">${index + 1}</span>`
+          : `<span class="learn-lesson-card__badge learn-lesson-card__badge--lock" aria-hidden="true">${ICON_LOCK}</span>`;
+
+    const textBlock = `<span class="learn-lesson-card__text">
+        <span class="learn-lesson-card__title">${escapeHtml(p.name)}</span>
+        <span class="learn-lesson-card__subtitle">${escapeHtml(subtitle)}</span>
+      </span>`;
+
+    if (state === "locked") {
+      parts.push(
+        `<div class="learn-lesson-card learn-lesson-card--locked" role="listitem" aria-current="false" title="Complete the previous lesson to unlock">${badge}${textBlock}${ICON_CHEVRON}</div>`
+      );
+    } else {
+      parts.push(
+        `<a class="learn-lesson-card learn-lesson-card--${state}" role="listitem" href="#/learn/${escapeHtml(p.id)}">${badge}${textBlock}${ICON_CHEVRON}</a>`
+      );
+    }
+  }
+  parts.push(`</div>`);
+  return parts.join("");
+}
+
+/**
  * @param {HTMLElement} root
  * @param {ReturnType<import('../../domain/buildCatalog.js').buildCatalog>} catalog
  * @param {string|undefined} patternId
  */
 export function mountLearn(root, catalog, patternId) {
   root.innerHTML = `
-    <div class="view-head">
-      <button type="button" class="btn btn--ghost back-btn">Home</button>
-      <h1 class="view-title">Learn</h1>
+    <div class="learn-layout">
+      <header class="learn-view-head">
+        <button type="button" class="btn btn--learn-back back-btn">
+          ${ICON_ARROW_HOME}
+          <span>Home</span>
+        </button>
+        <h1 class="view-title view-title--learn">Learn</h1>
+      </header>
+      <div class="learn-body"></div>
     </div>
-    <div class="learn-body"></div>
   `;
 
   root.querySelector(".back-btn")?.addEventListener("click", () => navigate("#/home"));
@@ -251,20 +357,7 @@ export function mountLearn(root, catalog, patternId) {
   if (!body) return;
 
   if (!patternId) {
-    const n = LEARN_INDEX_ORDER.filter((id) => catalog.patternsById[id]).length;
-    body.innerHTML = `<p class="muted"><strong>${n} lessons.</strong> Start with <strong>Verb + -ing</strong> and <strong>Verb + to + verb</strong>, then <strong>Tricky verbs</strong>. <strong>Both forms (same idea)</strong> is extra. Last: <strong>-ing</strong> after small words like <em>in</em> or <em>after</em>.</p>
-      <ul class="pattern-list"></ul>`;
-    const ul = body.querySelector(".pattern-list");
-    for (const id of LEARN_INDEX_ORDER) {
-      const p = catalog.patternsById[id];
-      if (!p) continue;
-      const li = document.createElement("li");
-      const a = document.createElement("a");
-      a.href = `#/learn/${p.id}`;
-      a.textContent = p.name;
-      li.appendChild(a);
-      ul?.appendChild(li);
-    }
+    body.innerHTML = buildLearnIndexInnerHtml(catalog);
     return;
   }
 
@@ -273,6 +366,8 @@ export function mountLearn(root, catalog, patternId) {
     body.innerHTML = `<p class="error">Unknown lesson.</p>`;
     return;
   }
+
+  markLessonVisited(patternId);
 
   const bothChangeLesson = isBothChangeLesson(catalog, patternId);
   const bothSameLesson = isBothSameLesson(catalog, patternId);
@@ -425,9 +520,11 @@ export function mountLearn(root, catalog, patternId) {
         </section>`;
 
   body.innerHTML = `
-    <nav class="breadcrumb"><a href="#/learn">Back to all lessons</a></nav>
-    <article class="pattern-detail">
-      <h2>${escapeHtml(pattern.name)}</h2>
+    <nav class="learn-detail-nav" aria-label="Lesson">
+      <a class="learn-detail-nav__link" href="#/learn">${ICON_ARROW_HOME}<span>All lessons</span></a>
+    </nav>
+    <article class="pattern-detail learn-detail-article">
+      <h2 class="learn-detail-article__title">${escapeHtml(pattern.name)}</h2>
       ${patternExplanationHtml}
       ${examplesSection}
       ${
