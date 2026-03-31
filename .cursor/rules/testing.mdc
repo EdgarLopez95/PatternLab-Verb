@@ -1,0 +1,125 @@
+# Testing Rule
+
+## Scope
+
+This rule applies to all parts of the project:
+- data (JSON files)
+- frontend (JS, HTML, CSS)
+- logic and rendering
+
+---
+
+## Purpose
+
+Ensure that changes do not break:
+- JSON integrity
+- relationships between data
+- runtime behavior
+- exercise generation logic
+
+Testing in this project is mostly **structural and functional**, not formal unit testing.
+
+---
+
+## Core Principle
+
+Every change must be **verifiable**.
+
+If something cannot be verified, it is not complete.
+
+---
+
+## JSON Validation
+
+Always check:
+
+- valid JSON syntax
+- no duplicate IDs
+- all references point to existing IDs
+- no missing required fields
+- structure consistency within each file
+
+---
+
+## Relationship Checks
+
+Verify that:
+
+- verbs correctly link to patterns and examples
+- examples correctly reference verbs and patterns
+- exercises correctly reference examples
+- no broken or orphan connections exist
+
+---
+
+## Exercise Integrity
+
+For each exercise:
+
+- referenced example exists
+- correct_answer matches the example
+- distractors are coherent and relevant
+- validation rules (if present) are consistent
+
+---
+
+## Frontend Verification
+
+After changes:
+
+- no console errors
+- UI renders correctly
+- data loads correctly from JSON
+- no undefined values in rendering
+- interactions (input, validation) work as expected
+
+---
+
+## Runtime Safety
+
+- avoid crashes due to missing data
+- validate before rendering
+- handle empty or invalid states gracefully
+
+---
+
+## Change Verification
+
+Before finishing any task:
+
+- run the app locally
+- manually test at least one full exercise flow
+- confirm that changes did not break existing behavior
+
+---
+
+## When Something Breaks
+
+- identify if the issue is in:
+  - data
+  - logic
+  - rendering
+- fix the root cause, not just the symptom
+- do not patch inconsistencies temporarily
+
+---
+
+## What to Avoid
+
+- assuming data is always valid
+- skipping verification after JSON changes
+- introducing silent errors
+- ignoring broken references
+- finishing tasks without testing basic flow
+
+---
+
+## Definition of Tested
+
+A change is considered tested when:
+
+- data is consistent
+- relationships are intact
+- UI works without errors
+- exercises behave correctly
+- no obvious regressions are present

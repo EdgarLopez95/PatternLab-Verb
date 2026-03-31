@@ -1,0 +1,50 @@
+[
+  {
+    "id": "fb_remember_gerund",
+    "title": "Gerund after remember",
+    "body": "Here, remember is followed by **-ing** because you recall a past experience (you remember doing the activity). With **to + verb**, remember means remembering to do something in the future.",
+    "hint": "Past memory → remember + -ing."
+  },
+  {
+    "id": "fb_enjoy_gerund",
+    "title": "Enjoy + -ing",
+    "body": "**Enjoy** is typically followed by a gerund (**-ing**), not by an infinitive.",
+    "hint": "After enjoy, use the -ing form."
+  },
+  {
+    "id": "fb_decide_infinitive",
+    "title": "Decide + to infinitive",
+    "body": "**Decide** is followed by **to + base verb** to express a decision about a future action.",
+    "hint": "Decide → to + verb."
+  },
+  {
+    "id": "fb_stop_infinitive",
+    "title": "Stop + to infinitive (purpose)",
+    "body": "**Stopped to eat** means we stopped for the purpose of eating. **Stop + -ing** means quitting an ongoing activity. The infinitive shows **purpose** after **stop**.",
+    "hint": "Purpose after stop → to + verb."
+  },
+  {
+    "id": "fb_forget_infinitive",
+    "title": "Forget + to infinitive",
+    "body": "**Don't forget to practice** refers to something to do later. **Forget + -ing** means forgetting something that happened (a memory).",
+    "hint": "Future task not done → forget + to + verb."
+  },
+  {
+    "id": "fb_stop_behavior",
+    "title": "Verb pattern type",
+    "body": "**Stop** can take both **-ing** and **to** infinitive; the meaning changes with the structure.",
+    "hint": "This verb is in the “both / meaning changes” group."
+  },
+  {
+    "id": "fb_generic_correct",
+    "title": "Correct",
+    "body": "You picked the right form. Read the explanation below to lock in the rule.",
+    "hint": null
+  },
+  {
+    "id": "fb_generic_incorrect",
+    "title": "Not quite",
+    "body": "Compare your answer with the correct pattern and review the feedback below.",
+    "hint": null
+  }
+]

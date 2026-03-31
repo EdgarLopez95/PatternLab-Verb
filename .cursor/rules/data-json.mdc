@@ -1,0 +1,121 @@
+---
+globs:
+  - data/**/*.json
+---
+
+# Data JSON Rule
+
+## Scope
+
+This rule applies to all JSON files inside `data/`.
+
+Main data files currently include:
+
+- `data/core/verbs.json`
+- `data/core/patterns.json`
+- `data/content/examples.json`
+- `data/content/feedback.json`
+- `data/exercises/exercises.json`
+- `data/config/settings.json`
+
+---
+
+## Purpose
+
+These JSON files are the structured foundation of the app.
+
+`exercises.json` entries with `type: "fill_blank"` may include optional `blank_lemma` (non-empty string) to override the UI hint next to the gap when automatic derivation from `correct_answer` is wrong (e.g. irregular **-ing** forms). `patterns.json` may include optional string fields `summary` and `contrast_note` (short pedagogical copy). Pattern `pat_both_change` is the Learn lesson for verbs with `pattern_behavior: both_change`; optional field `learn_kind: "both_change"` marks that lesson. Verbs must use `pattern_behavior` in `only_gerund`, `only_infinitive`, or `both_change`. `settings.json` may include `selection.recentBufferSize`, `mixed.rotateTypes`, `mixed.typeOrder`, `speed.exerciseTypes`, `tricky.requireVerbBothChange`, and under `ui`: `appTitle`, `fillBlankPlaceholder`, `enterToAdvanceOnCorrect`, `showSessionStats` (see `data/config/settings.json` and `docs/architecture/overview.md`).
+
+They must remain:
+- consistent
+- predictable
+- easy to validate
+- easy to expand
+
+---
+
+## Core Rules
+
+- Keep JSON structures stable and explicit.
+- Use consistent field names across similar objects.
+- Do not change schema casually.
+- Do not duplicate data unnecessarily.
+- Prefer references by ID over repeating full data.
+- Keep values clean, readable, and predictable.
+
+---
+
+## IDs and References
+
+- Every `id` must be unique within its file.
+- References to other entities must point to valid existing IDs.
+- Never create orphan references.
+- Never rename IDs without checking all dependent files.
+- Preserve current ID conventions unless a change is explicitly required.
+
+---
+
+## Relationship Integrity
+
+Before editing any JSON, check how it connects to other files.
+
+Examples:
+- verbs may reference patterns, categories, or tags
+- examples reference verbs and patterns
+- exercises reference examples
+- config may affect rendering or behavior
+
+If one file changes, verify all related references.
+
+---
+
+## Editing Rules
+
+- Prefer updating existing objects over rewriting entire files.
+- Keep object shapes consistent inside the same file.
+- If adding new entries, follow the existing naming style and field order when possible.
+- Avoid introducing optional fields unless clearly justified.
+- Do not remove fields that may be used by the frontend or validation logic.
+
+---
+
+## Data Quality
+
+- Avoid empty or meaningless placeholder values inside production data files.
+- Keep translations, labels, and examples aligned with the pedagogical purpose of the app.
+- Ensure exercise data matches the referenced example and expected answer.
+- Keep data realistic and useful for learning.
+
+---
+
+## When Expanding Data
+
+When adding new data:
+1. create the new entity with a valid ID
+2. connect it correctly to related entities
+3. verify all references
+4. preserve consistency with the current schema
+
+---
+
+## Verification Before Finishing
+
+Before considering a JSON change complete, verify:
+
+- valid JSON syntax
+- no duplicate IDs
+- no broken references
+- no accidental schema drift
+- no unnecessary duplication
+- consistency with the rest of `data/`
+
+---
+
+## Anti-Patterns
+
+Avoid:
+- hardcoded duplication of related data
+- inconsistent naming between similar fields
+- changing schema and data in the same step without control
+- adding loosely defined fields "just in case"
+- editing IDs without reviewing dependencies

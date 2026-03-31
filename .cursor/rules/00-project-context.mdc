@@ -1,0 +1,83 @@
+---
+alwaysApply: true
+---
+
+# Project Context Rule
+
+## Project Type
+
+This is a **data-driven web application** for learning English verb patterns.
+
+The app:
+- uses JSON files as the source of truth
+- generates exercises dynamically
+- does NOT store user progress
+- prioritizes speed, simplicity, and clarity
+
+---
+
+## Core Architecture
+
+The project is structured around 4 main data sources:
+
+- `data/core/verbs.json`
+- `data/core/patterns.json`
+- `data/content/examples.json`
+- `data/exercises/exercises.json`
+
+These files are **strongly connected by IDs**.
+
+---
+
+## Critical Rule
+
+NEVER break relationships between:
+
+- verbs ↔ patterns  
+- verbs ↔ examples  
+- examples ↔ exercises  
+
+All references must remain valid.
+
+---
+
+## Data-Driven Principle
+
+- The UI must be generated from JSON data.
+- Do NOT hardcode content that already exists in `data/`.
+- Logic should adapt to data, not the opposite.
+
+---
+
+## Working Rules
+
+- Before implementing non-trivial changes → propose a short plan.
+- Keep changes small and focused.
+- Do not introduce unnecessary abstractions or libraries.
+- Do not rename fields or IDs without checking all dependencies.
+- Prefer modifying existing structures over creating new ones.
+
+---
+
+## Priority Order
+
+When making changes, follow this order:
+
+1. Data integrity (JSON)
+2. Logic consistency
+3. UI rendering
+
+---
+
+## Goal of the System
+
+This is not just a UI app.
+
+It is a **practice engine** that:
+- reads structured data
+- generates exercises
+- validates answers
+- supports scalable learning content
+
+Always think in terms of:
+→ data → logic → interaction

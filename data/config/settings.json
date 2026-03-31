@@ -1,1 +1,35 @@
-{}
+{
+  "defaultMode": "home",
+  "selection": {
+    "recentBufferSize": 4
+  },
+  "practice": {
+    "shuffleOptions": true
+  },
+  "speed": {
+    "secondsPerQuestion": 25,
+    "autoAdvanceOnTimeout": true,
+    "exerciseTypes": ["multiple_choice", "fill_blank"]
+  },
+  "mixed": {
+    "trickyWeight": 0.45,
+    "shuffleOptions": true,
+    "rotateTypes": true,
+    "typeOrder": [
+      "multiple_choice",
+      "fill_blank",
+      "verb_pattern_behavior"
+    ]
+  },
+  "tricky": {
+    "useExampleFlag": true,
+    "useVerbTagMeaningChange": true,
+    "requireVerbBothChange": true
+  },
+  "ui": {
+    "appTitle": "PatternLab Verbs",
+    "fillBlankPlaceholder": "e.g. -ing or to + verb",
+    "enterToAdvanceOnCorrect": false,
+    "showSessionStats": false
+  }
+}

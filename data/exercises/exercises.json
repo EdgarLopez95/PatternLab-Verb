@@ -58,5 +58,29 @@
       "trim": true
     },
     "feedback_id": "fb_forget_infinitive"
+  },
+  {
+    "id": "q_006",
+    "type": "verb_pattern_behavior",
+    "verb_id": "v_stop",
+    "distractors": ["only_gerund", "only_infinitive"],
+    "correct_answer": "both_change",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_stop_behavior"
+  },
+  {
+    "id": "q_007",
+    "type": "verb_pattern_behavior",
+    "verb_id": "v_enjoy",
+    "distractors": ["only_infinitive", "both_change"],
+    "correct_answer": "only_gerund",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_enjoy_gerund"
   }
 ]

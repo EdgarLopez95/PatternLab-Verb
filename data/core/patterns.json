@@ -4,13 +4,27 @@
     "name": "Verb + Gerund",
     "structure": "Verb + [Verb]-ing",
     "rule_id": "rule_gen_gerund",
-    "type": "gerund"
+    "type": "gerund",
+    "summary": "Many verbs are followed by the **-ing** form when another verb comes next. This lesson lists verbs that **only** take **-ing** here—not verbs that also allow **to + verb** with a different meaning.",
+    "contrast_note": "If you need **to + verb** after the main verb, see the **Verb + To-Infinitive** lesson. Verbs like **remember**, **stop**, and **forget** can take **both** structures; those are covered in **Tricky verbs (both forms)**."
   },
   {
     "id": "pat_infinitive",
     "name": "Verb + To-Infinitive",
     "structure": "Verb + to + [Verb]",
     "rule_id": "rule_gen_infinitive",
-    "type": "infinitive"
+    "type": "infinitive",
+    "summary": "Some verbs take **to + base verb** when another action follows. This lesson lists verbs that **only** use this pattern in your dataset—not verbs that also use **-ing** with a different meaning.",
+    "contrast_note": "For **verb + -ing** only, see **Verb + Gerund**. For verbs where **-ing** vs **to** changes the meaning, open **Tricky verbs (both forms)**."
+  },
+  {
+    "id": "pat_both_change",
+    "name": "Tricky verbs (both forms)",
+    "structure": "Same verb + **-ing** vs **to + verb** → different meanings",
+    "rule_id": "rule_both_change",
+    "type": "both",
+    "learn_kind": "both_change",
+    "summary": "Some verbs allow **both** **-ing** and **to + verb**, but the **meaning changes**. Learning them in isolation (only gerund or only infinitive lessons) is misleading—this lesson groups those verbs together.",
+    "contrast_note": "**Remember doing** = you recall a past experience. **Remember to do** = you must not forget a future task. **Stop doing** = you quit an activity. **Stop to do** = you pause **in order to** do something else (purpose). **Forget doing** vs **forget to do** follows a similar split (past memory vs future task)."
   }
 ]

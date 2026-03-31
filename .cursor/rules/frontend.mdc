@@ -1,0 +1,12 @@
+---
+description: Convenciones de frontend (HTML/CSS/JS)
+globs: "**/*.{html,css,js}"
+---
+
+# Frontend
+
+Reglas para la capa de presentación en la raíz y `src/`.
+
+- Seguir la organización por `app`, `features`, `services` y `shared`.
+- Mantener estilos y scripts legibles; evitar globals innecesarios.
+- Acceso a datos vía rutas y layouts acordados con `data/`.
