@@ -1,0 +1,16 @@
+[
+  {
+    "id": "pat_gerund",
+    "name": "Verb + Gerund",
+    "structure": "Verb + [Verb]-ing",
+    "rule_id": "rule_gen_gerund",
+    "type": "gerund"
+  },
+  {
+    "id": "pat_infinitive",
+    "name": "Verb + To-Infinitive",
+    "structure": "Verb + to + [Verb]",
+    "rule_id": "rule_gen_infinitive",
+    "type": "infinitive"
+  }
+]

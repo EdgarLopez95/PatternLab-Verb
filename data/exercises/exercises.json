@@ -1,0 +1,62 @@
+[
+  {
+    "id": "q_001",
+    "type": "multiple_choice",
+    "example_id": "ex_001",
+    "distractors": ["to play", "play"],
+    "correct_answer": "playing",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_remember_gerund"
+  },
+  {
+    "id": "q_002",
+    "type": "fill_blank",
+    "example_id": "ex_002",
+    "distractors": [],
+    "correct_answer": "petting",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_enjoy_gerund"
+  },
+  {
+    "id": "q_003",
+    "type": "multiple_choice",
+    "example_id": "ex_003",
+    "distractors": ["focusing", "focus"],
+    "correct_answer": "to focus",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_decide_infinitive"
+  },
+  {
+    "id": "q_004",
+    "type": "multiple_choice",
+    "example_id": "ex_004",
+    "distractors": ["eating", "eat"],
+    "correct_answer": "to eat",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_stop_infinitive"
+  },
+  {
+    "id": "q_005",
+    "type": "fill_blank",
+    "example_id": "ex_005",
+    "distractors": [],
+    "correct_answer": "to practice",
+    "validation": {
+      "case_sensitive": false,
+      "trim": true
+    },
+    "feedback_id": "fb_forget_infinitive"
+  }
+]

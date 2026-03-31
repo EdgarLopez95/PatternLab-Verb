@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ex_001",
+    "verb_id": "v_remember",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "I clearly remember ",
+      "target": "playing",
+      "suffix": " World of Warcraft with my friends years ago."
+    },
+    "translation_es": "Recuerdo claramente haber jugado World of Warcraft con mis amigos hace años.",
+    "level": "B1",
+    "focus": "meaning_change",
+    "is_tricky": true
+  },
+  {
+    "id": "ex_002",
+    "verb_id": "v_enjoy",
+    "pattern_id": "pat_gerund",
+    "sentence_parts": {
+      "prefix": "Valentina enjoys ",
+      "target": "petting",
+      "suffix": " Gero when he is calm."
+    },
+    "translation_es": "Valentina disfruta acariciar a Gero cuando está tranquilo.",
+    "level": "A2",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_003",
+    "verb_id": "v_decide",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "He decided ",
+      "target": "to focus",
+      "suffix": " his career on UI design."
+    },
+    "translation_es": "Él decidió enfocar su carrera en el diseño UI.",
+    "level": "B1",
+    "focus": "pattern",
+    "is_tricky": false
+  },
+  {
+    "id": "ex_004",
+    "verb_id": "v_stop",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "After walking in Bogotá, we stopped ",
+      "target": "to eat",
+      "suffix": " some pasta."
+    },
+    "translation_es": "Después de caminar en Bogotá, nos detuvimos a comer algo de pasta.",
+    "level": "B1",
+    "focus": "meaning_change",
+    "is_tricky": true
+  },
+  {
+    "id": "ex_005",
+    "verb_id": "v_forget",
+    "pattern_id": "pat_infinitive",
+    "sentence_parts": {
+      "prefix": "Don't forget ",
+      "target": "to practice",
+      "suffix": " your English this Saturday."
+    },
+    "translation_es": "No olvides practicar tu inglés este sábado.",
+    "level": "A2",
+    "focus": "meaning_change",
+    "is_tricky": true
+  }
+]

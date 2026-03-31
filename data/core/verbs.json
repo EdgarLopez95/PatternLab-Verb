@@ -1,0 +1,47 @@
+[
+  {
+    "id": "v_remember",
+    "base_form": "remember",
+    "translation_es": "recordar",
+    "pattern_behavior": "both_change",
+    "pattern_usages": ["pat_gerund", "pat_infinitive"],
+    "category_ids": ["cat_cognition"],
+    "tag_ids": ["tag_meaning_change"]
+  },
+  {
+    "id": "v_enjoy",
+    "base_form": "enjoy",
+    "translation_es": "disfrutar",
+    "pattern_behavior": "only_gerund",
+    "pattern_usages": ["pat_gerund"],
+    "category_ids": ["cat_preference"],
+    "tag_ids": ["tag_a2"]
+  },
+  {
+    "id": "v_decide",
+    "base_form": "decide",
+    "translation_es": "decidir",
+    "pattern_behavior": "only_infinitive",
+    "pattern_usages": ["pat_infinitive"],
+    "category_ids": ["cat_action"],
+    "tag_ids": ["tag_a2"]
+  },
+  {
+    "id": "v_stop",
+    "base_form": "stop",
+    "translation_es": "detener(se) / parar",
+    "pattern_behavior": "both_change",
+    "pattern_usages": ["pat_gerund", "pat_infinitive"],
+    "category_ids": ["cat_action"],
+    "tag_ids": ["tag_meaning_change"]
+  },
+  {
+    "id": "v_forget",
+    "base_form": "forget",
+    "translation_es": "olvidar",
+    "pattern_behavior": "both_change",
+    "pattern_usages": ["pat_gerund", "pat_infinitive"],
+    "category_ids": ["cat_cognition"],
+    "tag_ids": ["tag_meaning_change"]
+  }
+]
