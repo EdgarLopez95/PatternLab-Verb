@@ -49,25 +49,44 @@ Documento de referencia para implementación en código. Si el informe original 
 
 ## Tipografía
 
-- **Familia:** [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) (400, 500, 600, 700).
-- **Escala sugerida:**
-  - Hero título app: `1.75rem` / 700
-  - `h1` vista: `1.35rem` / 600
-  - Cuerpo: `1rem` / 1.5
-  - Meta / kicker: `0.72rem` / 600, uppercase, letter-spacing `0.08em`
-  - Descripción cards: `0.9rem` / muted
+- **Familia:** [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) (400, 500, 600, 700). Código / números tabulares: `var(--font-mono)` donde aplique.
+- **Pesos:** `--font-weight-normal` (400), `--font-weight-medium` (500), `--font-weight-semibold` (600), `--font-weight-bold` (700), `--font-weight-extrabold` (800).
+- **Interlineado:** `--leading-none` … `--leading-loose` (ver `:root` en `styles.css`).
+- **Tracking:** `--letter-tight`, `--letter-wide`, `--letter-label`, `--letter-caps`.
+
+### Escala tipográfica (tokens)
+
+| Token | Tamaño aprox. | Uso |
+|-------|----------------|-----|
+| `--text-2xs` | 11px | Chrome mínimo, badges densos |
+| `--text-xs` | 12px | Labels, captions, meta |
+| `--text-sm` | 13px | Texto secundario, chips, listas compactas |
+| `--text-md` | 14px | Cuerpo denso, UI secundaria |
+| `--text-base` | 16px | Cuerpo estándar, inputs |
+| `--text-lg` | 17px | Lead / descripción hero (`.app-tagline`), énfasis suave |
+| `--text-xl` … `--text-3xl` | 18–22px | Subtítulos de vista, resultados |
+| `--text-4xl` | 24px | Títulos de sección destacados |
+| `--text-5xl` | 28px | Marca / hero (`.app-title`) |
+| `--text-display` | ~30px | HUD numérico (timer speed) |
+
+**Jerarquía recomendada:** título app → `--text-5xl` / bold; título de vista → `--text-3xl` o `--text-2xl` / semibold; secciones Learn → `--text-lg`–`--text-base`; cuerpo → `--text-base` con `--leading-normal` o `--leading-loose` en prosa larga; kickers → `--text-2xs`–`--text-xs` + uppercase + `--letter-label`.
 
 ## Espaciado
 
-- Escala base **4px**: `--space-1` 4px … `--space-6` 24px (definido en `:root`).
-- Padding tarjeta modo home: `1.25rem 1.35rem`.
-- Gap grid home: `1rem`.
+- Escala **4px** en `rem`: `--space-1` (4) … `--space-8` (32), más `--space-5` (20) y `--space-7` (28) para ritmos intermedios.
+- **Regla:** preferir solo estos tokens para `margin`, `padding`, `gap` y `row-gap`/`column-gap` en componentes nuevos; evitar `0.35rem`, `0.65rem`, etc.
+- Tarjetas: `--card-padding`, `--card-padding-sm`, `--card-gap`.
+- Ancho máximo del layout: `--layout-max-width` (1300px).
 
 ## Radios y bordes
 
-- `--radius-sm`: 8px (inputs, pills pequeños)
-- `--radius-md`: 12px (botones, cards internas)
-- `--radius-lg`: 16px (cards home)
+- `--radius-xs` (4px), `--radius-sm` (8px), `--radius-md` (12px), `--radius-lg` (16px), `--radius-pill` (999px).
+- **Bordes:** `--border-width` (1px), `--border-width-thick` (2px). Usar `var(--border-width) solid var(--color-border)` en lugar de `1px` suelto.
+
+## Motion
+
+- `--duration-fast` (150ms), `--duration-normal` (200ms), `--ease-standard`, `--transition-interactive` (borde/sombra/fondo/color).
+- Respetar `prefers-reduced-motion: reduce` en animaciones y transforms.
 
 ## Componentes
 
@@ -75,7 +94,7 @@ Documento de referencia para implementación en código. Si el informe original 
 
 - Fondo `--color-primary`, texto blanco en claro; en oscuro texto `#12101a` si contraste OK.
 - Hover: `--color-primary-hover`.
-- `border-radius: var(--radius-md)`, `font-weight: 600`, `padding` vertical generoso.
+- `border-radius: var(--radius-md)`, `font-weight: var(--font-weight-semibold)`, `padding` vertical generoso.
 
 ### Botón ghost / secundario
 
@@ -87,12 +106,12 @@ Documento de referencia para implementación en código. Si el informe original 
 
 ### Card modo (home)
 
-- Fondo `--color-surface`, borde `1px solid var(--color-border)`, sombra `--shadow-card`.
+- Fondo `--color-surface`, borde `var(--border-width) solid var(--color-border)`, sombra `--shadow-card`.
 - Hover: borde `--color-primary` al 35% opacidad o sólido suave, `translateY(-1px)` si `prefers-reduced-motion: no-preference`.
 
 ### Pill / tag categoría
 
-- `display: inline-flex`, `padding: 0.2rem 0.55rem`, `border-radius: 999px`, fondo `--color-primary-soft`, color `--color-primary-soft-text`, `font-size: 0.7rem`, `font-weight: 600`.
+- `display: inline-flex`, `padding: var(--space-1) var(--space-2)`, `border-radius: var(--radius-pill)`, fondo `--color-primary-soft`, color `--color-primary-soft-text`, `font-size: var(--text-2xs)`, `font-weight: var(--font-weight-semibold)`.
 
 ### Barra superior (`app-shell__bar`)
 
@@ -107,11 +126,6 @@ Documento de referencia para implementación en código. Si el informe original 
 
 - Estilo **línea** (stroke ~1.5), color `--color-primary` en cards home.
 - Tamaño contenedor icono: 40×40px en círculo suave `--color-primary-soft`.
-
-## Motion
-
-- Transiciones UI: `150–200ms` `ease`.
-- Respetar `prefers-reduced-motion: reduce` (reducir o eliminar transform/animaciones).
 
 ## Mapeo a clases existentes
 

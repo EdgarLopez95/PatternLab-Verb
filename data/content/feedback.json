@@ -38,13 +38,13 @@
   {
     "id": "fb_generic_correct",
     "title": "Correct",
-    "body": "You picked the right form. Read the explanation below to learn the rule.",
+    "body": "Read the rule below to remember it.",
     "hint": null
   },
   {
     "id": "fb_generic_incorrect",
-    "title": "Not quite",
-    "body": "Compare your answer with the correct one. Read the notes below.",
+    "title": "Incorrect",
+    "body": "Learn the rule below.",
     "hint": null
   },
   {

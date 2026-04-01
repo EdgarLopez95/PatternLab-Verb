@@ -56,22 +56,48 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
           <p class="exercise-type-kicker muted" data-exercise-type aria-hidden="true"></p>
           <h2 class="region-label" id="question-region-label">Question</h2>
           <div class="stem-host"></div>
-        </div>
-        <div class="practice-region practice-region--answer">
-          <h2 class="region-label region-label--answer">Your answer</h2>
-          <p class="session-stats muted" data-session-stats hidden></p>
           <div class="hint-host" data-hint-host hidden>
             <button type="button" class="btn btn--ghost hint-btn">Show hint</button>
             <p class="hint-preview muted" data-hint-preview hidden></p>
           </div>
+        </div>
+        <div class="practice-region practice-region--answer">
+          <h2 class="region-label region-label--answer" id="answer-region-label">Your answer</h2>
+          <p class="session-stats muted" data-session-stats hidden></p>
           <div class="actions-host"></div>
         </div>
-        <div class="practice-region practice-region--result feedback-host" hidden>
+        <div
+          class="practice-region practice-region--result feedback-host"
+          id="practice-feedback-panel"
+          hidden
+        >
           <h2 class="region-label">Result</h2>
           <div class="feedback-inner"></div>
         </div>
         <div class="nav-host">
-          <button type="button" class="btn btn--primary next-btn" hidden>Next question</button>
+          <div class="review-bar" data-review-bar hidden>
+            <p class="review-bar__status" data-review-status aria-live="polite"></p>
+            <div class="review-bar__row">
+              <button type="button" class="btn btn--primary next-btn" hidden>
+                Next question
+              </button>
+              <div class="review-bar__feedback-slot">
+                <button
+                  type="button"
+                  class="btn btn--ghost review-bar__see-feedback"
+                  data-show-feedback-btn
+                  hidden
+                  aria-expanded="false"
+                  aria-controls="practice-feedback-panel"
+                >
+                  See feedback
+                </button>
+                <span class="review-bar__invite muted" data-feedback-invite hidden>
+                  Optional — notes and correct answer
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -84,9 +110,15 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
   const feedbackHost = root.querySelector(".feedback-host");
   const feedbackInner = root.querySelector(".feedback-inner");
   const nextBtn = root.querySelector(".next-btn");
+  const reviewBar = root.querySelector("[data-review-bar]");
+  const reviewStatusEl = root.querySelector("[data-review-status]");
+  const showFeedbackBtn = root.querySelector("[data-show-feedback-btn]");
+  const feedbackInviteEl = root.querySelector("[data-feedback-invite]");
   const practiceScoreEl = root.querySelector("[data-practice-score]");
   const practiceAnchorEl = root.querySelector("[data-practice-anchor]");
   const typeKicker = root.querySelector("[data-exercise-type]");
+  const questionLabelEl = root.querySelector("#question-region-label");
+  const answerLabelEl = root.querySelector("#answer-region-label");
   const hintHost = root.querySelector("[data-hint-host]");
   const hintBtn = root.querySelector(".hint-btn");
   const hintPreview = root.querySelector("[data-hint-preview]");
@@ -100,7 +132,10 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
     !feedbackHost ||
     !feedbackInner ||
     !nextBtn ||
-    !card
+    !card ||
+    !reviewBar ||
+    !reviewStatusEl ||
+    !showFeedbackBtn
   ) {
     return;
   }
@@ -130,7 +165,7 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
       return;
     }
     sessionStatsEl.hidden = false;
-    sessionStatsEl.textContent = `This session: ${sessionStats.incorrectCount} wrong · ${sessionStats.hintRevealCount} hints`;
+    sessionStatsEl.textContent = `${sessionStats.incorrectCount} incorrect · ${sessionStats.hintRevealCount} tips (this session)`;
   }
 
   function updatePracticeScoreLine() {
@@ -140,7 +175,7 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
       return;
     }
     practiceScoreEl.hidden = false;
-    practiceScoreEl.textContent = `Correct: ${sessionStats.correctCount} · Wrong: ${sessionStats.incorrectCount}`;
+    practiceScoreEl.textContent = `Correct: ${sessionStats.correctCount} · Incorrect: ${sessionStats.incorrectCount}`;
   }
 
   let currentId = pickNextExerciseId(
@@ -151,10 +186,22 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
     filterOpts
   );
 
-  function setFeedback(result, exercise, timedOut) {
-    feedbackHost.hidden = false;
+  /**
+   * @param {{ correct: boolean }} result
+   * @param {object} exercise
+   * @param {boolean} timedOut
+   * @param {{ userAnswerDisplay?: string | null; isMcFeedback?: boolean }} [opts]
+   */
+  function setFeedback(result, exercise, timedOut, opts = {}) {
+    const { userAnswerDisplay = null, isMcFeedback = false } = opts;
     card.setAttribute("data-phase", "reviewed");
     card.classList.add("exercise-card--answered");
+    feedbackHost.hidden = true;
+    showFeedbackBtn.hidden = false;
+    showFeedbackBtn.setAttribute("aria-expanded", "false");
+    showFeedbackBtn.textContent = "See feedback";
+    if (feedbackInviteEl) feedbackInviteEl.hidden = false;
+    reviewBar.hidden = false;
 
     const fb = catalog.feedbackById[exercise.feedback_id];
     const genOk = catalog.feedbackById["fb_generic_correct"];
@@ -164,7 +211,7 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
       ? "Time's up"
       : result.correct
         ? genOk?.title || "Correct"
-        : genBad?.title || "Not quite";
+        : genBad?.title || "Incorrect";
 
     const shortLine = timedOut
       ? `<p class="feedback-lead">${escapeHtml(genBad?.body || "Too slow. Try the next one.")}</p>`
@@ -190,7 +237,7 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
          <h3 class="feedback-block__title">Translation</h3>
          <p class="translation">${escapeHtml(exRef.translation_es)}</p>
        </div>`
-      : "";
+        : "";
 
     const keyLabel =
       exercise.type === "verb_pattern_behavior"
@@ -198,7 +245,21 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
           String(exercise.correct_answer)
         : String(exercise.correct_answer);
 
-    const answerBlock = `<div class="feedback-block feedback-block--answer">
+    const showMcCompare =
+      isMcFeedback && userAnswerDisplay != null && !timedOut;
+
+    const answerSummaryBlock = showMcCompare
+      ? `<div class="feedback-compare feedback-compare--mc" role="group" aria-label="Your answer and correct answer">
+      <div class="feedback-compare__col">
+        <h3 class="feedback-compare__heading">Your answer</h3>
+        <p class="feedback-compare__text">${escapeHtml(userAnswerDisplay)}</p>
+      </div>
+      <div class="feedback-compare__col">
+        <h3 class="feedback-compare__heading">Correct answer</h3>
+        <p class="feedback-compare__text feedback-compare__text--key">${escapeHtml(keyLabel)}</p>
+      </div>
+    </div>`
+      : `<div class="feedback-block feedback-block--answer">
       <h3 class="feedback-block__title">Correct answer</h3>
       <p class="answer-key">${escapeHtml(keyLabel)}</p>
     </div>`;
@@ -212,16 +273,24 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
     const hasDetails = detailParts.length > 0;
     const detailsPanelId = `feedback-details-${exercise.id}`;
 
+    const toggleExpand = isMcFeedback ? "Learn the rule" : "View explanation";
+    const toggleCollapse = isMcFeedback ? "Hide" : "Hide explanation";
+    const toggleClass = isMcFeedback
+      ? "btn btn--ghost feedback-details-toggle feedback-details-toggle--mc"
+      : "btn btn--ghost feedback-details-toggle";
+
     feedbackInner.innerHTML = `
-      <div class="feedback ${statusClass}">
+      <div class="feedback ${statusClass}${
+        isMcFeedback ? " feedback--mc" : ""
+      }">
         <div class="feedback-summary">
           <p class="result-title">${escapeHtml(title)}</p>
-          ${answerBlock}
+          ${answerSummaryBlock}
         </div>
         ${
           hasDetails
-            ? `<button type="button" class="btn btn--ghost feedback-details-toggle" aria-expanded="false" aria-controls="${escapeHtml(detailsPanelId)}">
-          View explanation
+            ? `<button type="button" class="${toggleClass}" aria-expanded="false" aria-controls="${escapeHtml(detailsPanelId)}">
+          ${escapeHtml(toggleExpand)}
         </button>
         <div id="${escapeHtml(detailsPanelId)}" class="feedback-details" hidden>
           ${detailParts.join("")}
@@ -239,9 +308,39 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
         const next = !expanded;
         detailsEl.hidden = !next;
         toggleBtn.setAttribute("aria-expanded", String(next));
-        toggleBtn.textContent = next ? "Hide explanation" : "View explanation";
+        toggleBtn.textContent = next ? toggleCollapse : toggleExpand;
       });
     }
+
+    reviewStatusEl.textContent = title;
+    reviewStatusEl.classList.remove(
+      "review-bar__status--ok",
+      "review-bar__status--bad"
+    );
+    if (!timedOut && result.correct) {
+      reviewStatusEl.classList.add("review-bar__status--ok");
+    } else {
+      reviewStatusEl.classList.add("review-bar__status--bad");
+    }
+
+    showFeedbackBtn.onclick = () => {
+      const open = feedbackHost.hidden;
+      feedbackHost.hidden = !open;
+      showFeedbackBtn.setAttribute("aria-expanded", String(open));
+      showFeedbackBtn.textContent = open ? "Hide feedback" : "See feedback";
+      if (feedbackInviteEl) feedbackInviteEl.hidden = open;
+      if (open) {
+        queueMicrotask(() => {
+          const smooth =
+            typeof matchMedia === "function" &&
+            matchMedia("(prefers-reduced-motion: no-preference)").matches;
+          feedbackHost.scrollIntoView({
+            behavior: smooth ? "smooth" : "auto",
+            block: "nearest",
+          });
+        });
+      }
+    };
   }
 
   function disableActions() {
@@ -249,6 +348,26 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
       el.setAttribute("disabled", "disabled");
     });
     if (hintBtn) hintBtn.setAttribute("disabled", "disabled");
+  }
+
+  /** @param {object} exercise @param {string} userValue @param {boolean} timedOut */
+  function markMcChoiceOutcome(exercise, userValue, timedOut) {
+    if (card.dataset.exerciseKind !== "mc" || timedOut) return;
+    const correct = String(exercise.correct_answer);
+    const picked = String(userValue);
+    actionsHost.querySelectorAll(".btn--choice").forEach((btn) => {
+      btn.classList.remove(
+        "btn--choice--picked",
+        "btn--choice--outcome-correct",
+        "btn--choice--outcome-wrong",
+        "btn--choice--outcome-idle"
+      );
+      const v = btn.dataset.choiceValue ?? "";
+      if (v === correct) btn.classList.add("btn--choice--outcome-correct");
+      else if (v === picked && picked !== correct)
+        btn.classList.add("btn--choice--outcome-wrong");
+      else btn.classList.add("btn--choice--outcome-idle");
+    });
   }
 
   /** @param {string} userValue @param {boolean} timedOut */
@@ -263,7 +382,12 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
     updateSessionStatsEl();
     updatePracticeScoreLine();
     disableActions();
-    setFeedback(result, exercise, timedOut);
+    markMcChoiceOutcome(exercise, userValue, timedOut);
+    const isMcFeedback = currentInteractionKind === "mc";
+    setFeedback(result, exercise, timedOut, {
+      userAnswerDisplay: timedOut ? null : userValue,
+      isMcFeedback,
+    });
     nextBtn.hidden = false;
     queueMicrotask(() => nextBtn?.focus());
 
@@ -290,15 +414,50 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
     feedbackHost.hidden = true;
     feedbackInner.innerHTML = "";
     nextBtn.hidden = true;
+    if (reviewBar) reviewBar.hidden = true;
+    if (reviewStatusEl) {
+      reviewStatusEl.textContent = "";
+      reviewStatusEl.classList.remove(
+        "review-bar__status--ok",
+        "review-bar__status--bad"
+      );
+    }
+    if (showFeedbackBtn) {
+      showFeedbackBtn.hidden = true;
+      showFeedbackBtn.onclick = null;
+      showFeedbackBtn.setAttribute("aria-expanded", "false");
+      showFeedbackBtn.textContent = "See feedback";
+    }
+    if (feedbackInviteEl) feedbackInviteEl.hidden = true;
     card.setAttribute("data-phase", "answering");
     card.classList.remove("exercise-card--answered");
     clearChoices(actionsHost);
 
     const exercise = catalog.exercisesById[id];
+    const model = resolveExerciseForView(catalog, id, shuffleOptions);
+    card.dataset.exerciseKind = model.kind;
+
     if (typeKicker) {
-      typeKicker.textContent = exercise
-        ? labelForExerciseType(exercise.type)
-        : "";
+      if (model.kind === "mc") {
+        typeKicker.textContent = "Choose the correct form";
+        typeKicker.classList.remove("muted");
+        typeKicker.classList.add("exercise-type-kicker--mc-lead");
+      } else {
+        typeKicker.textContent = exercise
+          ? labelForExerciseType(exercise.type)
+          : "";
+        typeKicker.classList.add("muted");
+        typeKicker.classList.remove("exercise-type-kicker--mc-lead");
+      }
+      typeKicker.setAttribute("aria-hidden", "false");
+    }
+    if (questionLabelEl) {
+      questionLabelEl.textContent =
+        model.kind === "mc" ? "Complete the sentence" : "Question";
+    }
+    if (answerLabelEl) {
+      answerLabelEl.textContent =
+        model.kind === "mc" ? "Choose one answer" : "Your answer";
     }
 
     if (hintHost) hintHost.hidden = true;
@@ -308,6 +467,13 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
     }
     if (hintBtn) {
       hintBtn.removeAttribute("disabled");
+      if (model.kind === "mc") {
+        hintBtn.className = "btn hint-btn hint-btn--as-tip";
+        hintBtn.textContent = "Need help?";
+      } else {
+        hintBtn.className = "btn btn--ghost hint-btn";
+        hintBtn.textContent = "Show hint";
+      }
     }
 
     const fbPre = exercise
@@ -323,8 +489,6 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
         hintBtn.setAttribute("disabled", "disabled");
       };
     }
-
-    const model = resolveExerciseForView(catalog, id, shuffleOptions);
     if (practiceAnchorEl) {
       if (model.collocation?.display_phrase) {
         practiceAnchorEl.hidden = false;
@@ -341,9 +505,14 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
     if (model.kind === "mc" || model.kind === "verb_behavior") {
       currentInteractionKind =
         model.kind === "verb_behavior" ? "verb_behavior" : "mc";
-      renderMultipleChoice(actionsHost, model.choices, (value) => {
-        onAnswer(value, false);
-      });
+      renderMultipleChoice(
+        actionsHost,
+        model.choices,
+        (value) => {
+          onAnswer(value, false);
+        },
+        { markPicked: model.kind === "mc" }
+      );
     } else if (model.kind === "fill") {
       currentInteractionKind = "fill";
       renderFillBlank(actionsHost, (value) => onAnswer(value, false), {
@@ -353,6 +522,8 @@ export function mountPractice(root, catalog, mode, patternIdFilter = null) {
 
     updateSessionStatsEl();
     updatePracticeScoreLine();
+
+    root.classList.toggle("practice-view--mc-focus", model.kind === "mc");
   }
 
   nextBtn.addEventListener("click", () => {

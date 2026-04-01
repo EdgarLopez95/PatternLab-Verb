@@ -23,6 +23,9 @@ export function renderExerciseStem(container, model) {
   const { prefix, suffix, placeholder } = model.sentence;
   const wrap = document.createElement("p");
   wrap.className = "stem stem--gap";
+  if (model.kind === "mc") {
+    wrap.classList.add("stem--mc-sentence");
+  }
   wrap.appendChild(document.createTextNode(prefix));
   if (model.kind === "fill" && model.blankLemma) {
     const lem = document.createElement("span");
@@ -36,10 +39,24 @@ export function renderExerciseStem(container, model) {
   }
   const gap = document.createElement("span");
   gap.className = "gap";
+  if (model.kind === "mc") {
+    gap.classList.add("gap--mc");
+    gap.setAttribute(
+      "aria-label",
+      "Gap in the sentence — choose one of the answers below"
+    );
+  }
   gap.textContent = placeholder || "____";
   wrap.appendChild(gap);
   wrap.appendChild(document.createTextNode(suffix));
-  container.appendChild(wrap);
+  if (model.kind === "mc") {
+    const block = document.createElement("div");
+    block.className = "mc-sentence-block";
+    block.appendChild(wrap);
+    container.appendChild(block);
+  } else {
+    container.appendChild(wrap);
+  }
 }
 
 /** @param {HTMLElement} container */
@@ -51,15 +68,26 @@ export function clearChoices(container) {
  * @param {HTMLElement} actions host for buttons
  * @param {{ value: string; label: string }[]} choices
  * @param {(value: string) => void} onPick
+ * @param {{ markPicked?: boolean }} [opts] if markPicked, highlight the chosen option when disabled (MC UX)
  */
-export function renderMultipleChoice(actions, choices, onPick) {
+export function renderMultipleChoice(actions, choices, onPick, opts = {}) {
+  const markPicked = opts.markPicked === true;
   actions.innerHTML = "";
   for (const c of choices) {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "btn btn--choice";
+    btn.dataset.choiceValue = c.value;
     btn.textContent = c.label;
-    btn.addEventListener("click", () => onPick(c.value));
+    btn.addEventListener("click", () => {
+      if (markPicked) {
+        actions.querySelectorAll(".btn--choice--picked").forEach((b) => {
+          b.classList.remove("btn--choice--picked");
+        });
+        btn.classList.add("btn--choice--picked");
+      }
+      onPick(c.value);
+    });
     actions.appendChild(btn);
   }
 }
