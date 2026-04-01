@@ -5,8 +5,8 @@
     "structure": "Verb + another verb with **-ing**",
     "rule_id": "rule_gen_gerund",
     "type": "gerund",
-    "summary": "Many verbs use **-ing** when a second verb comes next. This lesson is only for verbs that **always** use **-ing** here. It is not for verbs that can also use **to + verb** with a different meaning.",
-    "contrast_note": "If you need **to + verb** after the main verb, open **Verb + to + verb**. **Remember**, **stop**, and **forget** use **both** forms with different meanings — see **Tricky verbs (two forms)**. Some verbs use **both** with a **similar** meaning — see **Both forms (same idea)**."
+    "summary": "**After these verbs, the next verb ends in -ing** (enjoy **reading**, avoid **making**). **Never** use **to + verb** in this lesson.",
+    "contrast_note": "**Different lesson:** **Verb + to + verb** (want **to go**). **Same verb, two meanings?** **Tricky verbs: different meaning**. **Both forms OK, same idea?** **Both forms: same meaning**."
   },
   {
     "id": "pat_infinitive",
@@ -14,28 +14,28 @@
     "structure": "Verb + **to** + another verb",
     "rule_id": "rule_gen_infinitive",
     "type": "infinitive",
-    "summary": "Some verbs use **to + verb** when a second action follows. This lesson is only for verbs that **always** use **to + verb** here. It is not for verbs that can also use **-ing** with a different meaning.",
-    "contrast_note": "For **verb + -ing** only, open **Verb + -ing**. When **-ing** and **to + verb** change the meaning, open **Tricky verbs (two forms)**. When both forms are OK with a **similar** idea, open **Both forms (same idea)**."
+    "summary": "**After these verbs, use to + base verb** (want **to go**, decide **to stay**). **Not** **-ing** in this lesson.",
+    "contrast_note": "**Different lesson:** **Verb + -ing** (enjoy **reading**). **Same verb, two meanings?** **Tricky verbs: different meaning**. **Both forms OK, same idea?** **Both forms: same meaning**."
   },
   {
     "id": "pat_both_change",
-    "name": "Tricky verbs (two forms)",
+    "name": "Tricky verbs: different meaning",
     "structure": "Same verb: **-ing** or **to + verb** — different meanings",
     "rule_id": "rule_both_change",
     "type": "both",
     "learn_kind": "both_change",
-    "summary": "Some verbs allow **-ing** **or** **to + verb**. The meaning changes. This lesson groups those verbs so you can compare them.",
-    "contrast_note": "**Remember doing** = you remember something you did before. **Remember to do** = do not forget something you must do later. **Stop doing** = you end an activity. **Stop to do** = you stop **so you can** do something else. **Forget doing** and **forget to do** work in a similar way (past vs future). This is **not** the same as **Both forms (same idea)** (for example **start** / **begin**)."
+    "summary": "Some verbs allow **-ing** **or** **to + verb**. **Here the meaning changes** — so read the **sentence**, not only the grammar.",
+    "contrast_note": "**Not** **Both forms: same meaning**: there the two forms feel **almost the same**. **Not** lessons 1–2: those verbs take **only** **-ing** or **only** **to + verb**."
   },
   {
     "id": "pat_both_same",
-    "name": "Both forms (same idea)",
+    "name": "Both forms: same meaning",
     "structure": "**-ing** or **to + verb** — the idea stays **similar**",
     "rule_id": "rule_both_same",
     "type": "both",
     "learn_kind": "both_same",
-    "summary": "Some verbs allow **-ing** **or** **to + verb** after them. Often the meaning stays **similar**. This lesson is **not** for verbs where the meaning **clearly changes**.",
-    "contrast_note": "If the meaning **changes** a lot, open **Tricky verbs (two forms)** (**remember**, **stop**, **forget**). For **only -ing** or **only to + verb**, open the other two main lessons."
+    "summary": "**You can often use either form.** The meaning stays **about the same**. No need to stress — this is **easier** than **Tricky verbs**.",
+    "contrast_note": "**Tricky verbs** = same verb, **different ideas**. **Lessons 1–2** = **only** **-ing** or **only** **to + verb**."
   },
   {
     "id": "pat_prep_gerund",
@@ -44,7 +44,7 @@
     "rule_id": "rule_prep_gerund",
     "type": "prep_gerund",
     "learn_kind": "prep_gerund",
-    "summary": "Often the important part is a **small word** (**in**, **at**, **after**) or a **set phrase** (**interested in**, **good at**). After that you usually use **-ing**, not **to + verb**. This is not the same as **Verb + -ing** in the other lessons.",
-    "contrast_note": "**Verb + -ing** is about the **main verb** (for example **enjoy playing**, **decide to go**). This lesson is different: you learn what comes **after** **in**, **at**, **after**, and similar words. It is almost always **-ing** (for example **interested in learning**, **after eating**). Try to keep the two ideas separate."
+    "summary": "Look at the word **before** the verb (**in**, **at**, **after**, **interested in**…). **After that, use -ing** — not **to + verb**.",
+    "contrast_note": "**Verb + -ing** (lesson 1) = the **main verb** decides (**enjoy playing**). **Here** = the **preposition** decides (**interested in learning**). Different place, same **-ing** sound — **different rule**."
   }
 ]
